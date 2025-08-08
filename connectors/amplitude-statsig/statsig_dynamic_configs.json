@@ -1,0 +1,3660 @@
+[
+  {
+    "id": "vip-matchmaker-config",
+    "name": "vip-matchmaker-config",
+    "description": "Configuration for the VIP Matchmaker MVP\nSee epic here -> https://grindr.atlassian.net/browse/ADJ-109",
+    "idType": "profileId",
+    "lastModifierID": "1N7FIkKRkqkEEKbxPXKOuh",
+    "lastModifiedTime": 1753981581293,
+    "lastModifierName": "Chad Newbry",
+    "lastModifierEmail": "chad.newbry@team.grindr.com",
+    "creatorID": "4QiHFqH4qVMdS2dVYVr26L",
+    "createdTime": 1752858115361,
+    "creatorName": "Andres Atehortua",
+    "creatorEmail": "andres.atehortua@team.grindr.com",
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [
+      "VIP"
+    ],
+    "team": null,
+    "owner": {
+      "ownerID": "4QiHFqH4qVMdS2dVYVr26L",
+      "ownerType": "USER",
+      "ownerName": "Andres Atehortua",
+      "ownerEmail": "andres.atehortua@team.grindr.com"
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "4714IHaVfAB5fuOCEm7Gtb",
+        "baseID": "4714IHaVfAB5fuOCEm7Gtb",
+        "name": "Development - Everyone",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "matchmakerIds": [
+            133985162,
+            133985293,
+            133986960,
+            133903267
+          ],
+          "curatedAccountIds": [
+            133984864,
+            133985537,
+            133985538,
+            133986498,
+            133984864
+          ]
+        },
+        "returnValueJson5": "{\n  \"matchmakerIds\": [133985162, 133985293, 133986960, 133903267],\n  \"curatedAccountIds\": [133984864, 133985537, 133985538, 133986498, 133984864],\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "4714IIPXHSKzyUmyfu3jMd",
+        "baseID": "4714IIPXHSKzyUmyfu3jMd",
+        "name": "Production - Everyone",
+        "passPercentage": 0,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "matchmakerIds": [
+            692120196
+          ],
+          "curatedAccountIds": []
+        },
+        "returnValueJson5": "{\n  \"matchmakerIds\": [692120196],\n  \"curatedAccountIds\": [],\n}\n",
+        "environments": [
+          "production"
+        ]
+      }
+    ],
+    "defaultValue": {},
+    "defaultValueJson5": "//Add your Dynamic Config below\n\n{}\n",
+    "version": 12
+  },
+  {
+    "id": "banner-non-chat-environment",
+    "name": "banner-non-chat-environment",
+    "description": "",
+    "idType": "profileId",
+    "lastModifierID": "71EeaNwF3DHtLkNSlemLe1",
+    "lastModifiedTime": 1753906208626,
+    "lastModifierName": "luisa.valderrama ",
+    "lastModifierEmail": "luisa.valderrama@team.grindr.com",
+    "creatorID": "7C0mjI9kZMWDF2QVjqR15o",
+    "createdTime": 1752594880651,
+    "creatorName": "Luis Salinas",
+    "creatorEmail": "luis.salinas@team.grindr.com",
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [
+      "Ads"
+    ],
+    "team": null,
+    "owner": {
+      "ownerID": "7C0mjI9kZMWDF2QVjqR15o",
+      "ownerType": "USER",
+      "ownerName": "Luis Salinas",
+      "ownerEmail": "luis.salinas@team.grindr.com"
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "78Vnl6jiI3n6VW24c3uyZn",
+        "baseID": "78Vnl6jiI3n6VW24c3uyZn",
+        "name": "Override User - Prod",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "custom_field",
+            "targetValue": [
+              "622592077",
+              "604939778",
+              "673899426"
+            ],
+            "operator": "any",
+            "field": "profileId"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 14
+        },
+        "returnValueJson5": "{ \"isHardRefreshEnabled\": true, \"getHardRefreshSeconds\": 14 }\n",
+        "environments": [
+          "production"
+        ]
+      },
+      {
+        "id": "8J3MJfEl4ZCc0HFFGXUT0",
+        "baseID": "8J3MJfEl4ZCc0HFFGXUT0",
+        "name": "Development - Android",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "os_name",
+            "targetValue": [
+              "Android"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 14
+        },
+        "returnValueJson5": "{ \"isHardRefreshEnabled\": true, \"getHardRefreshSeconds\": 14 }\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "8J3MKUGNn96vqfBgOTyc2",
+        "baseID": "8J3MKUGNn96vqfBgOTyc2",
+        "name": "Development - iOS",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "os_name",
+            "targetValue": [
+              "iOS"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 14
+        },
+        "returnValueJson5": "{ \"isHardRefreshEnabled\": true, \"getHardRefreshSeconds\": 14 }\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "8J3MMzJfFiAOPNwRWPbv4",
+        "baseID": "8J3MMzJfFiAOPNwRWPbv4",
+        "name": "Production - Everyone",
+        "passPercentage": 0,
+        "conditions": [
+          {
+            "type": "app_version",
+            "targetValue": "25.13",
+            "operator": "version_gte"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 14
+        },
+        "returnValueJson5": "{ \"isHardRefreshEnabled\": true, \"getHardRefreshSeconds\": 14 }\n",
+        "environments": [
+          "production"
+        ]
+      }
+    ],
+    "defaultValue": {},
+    "defaultValueJson5": "//Add your Dynamic Config below\n\n{}\n",
+    "schema": "{\"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{}}",
+    "schemaJson5": "{\n  \"$schema\": \"https://json-schema.org/draft/2020-12/schema\",\n  \"properties\": {\n    // Define fields here to start writing your first schema\n  },\n}\n",
+    "version": 12
+  },
+  {
+    "id": "double-verify-enabled",
+    "name": "double-verify-enabled",
+    "description": "",
+    "idType": "userID",
+    "lastModifierID": "71ZULjJBXUdzlXTRxdlbQB",
+    "lastModifiedTime": 1754065146530,
+    "lastModifierName": "ricardo.calero ",
+    "lastModifierEmail": "ricardo.calero@team.grindr.com",
+    "creatorID": "71ZULjJBXUdzlXTRxdlbQB",
+    "createdTime": 1748976249095,
+    "creatorName": "ricardo.calero ",
+    "creatorEmail": "ricardo.calero@team.grindr.com",
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [
+      "Ads"
+    ],
+    "team": null,
+    "owner": {
+      "ownerID": "71ZULjJBXUdzlXTRxdlbQB",
+      "ownerType": "USER",
+      "ownerName": "ricardo.calero ",
+      "ownerEmail": "ricardo.calero@team.grindr.com"
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "7eb9NNVAYLkiQ1yU8GCW76",
+        "baseID": "7eb9NNVAYLkiQ1yU8GCW76",
+        "name": "Override users",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "custom_field",
+            "targetValue": [
+              "133985049"
+            ],
+            "operator": "any",
+            "field": "profileId"
+          }
+        ],
+        "returnValue": {
+          "networks": [
+            "google_ad_manager"
+          ],
+          "adFormats": [
+            "mrec-cascade-first",
+            "persistent-ad-banner",
+            "banner-non-chat-environment",
+            "banner-chatroom-top",
+            "chat_interstitial_on_close",
+            "chat_interstitial_on_open",
+            "profile_interstitial_on_open",
+            "profile_interstitial_on_close",
+            "interest_to_cascade_interstitial_on_close"
+          ],
+          "viewabilityImpressionDelayMs": 2000
+        },
+        "returnValueJson5": "{\n  \"networks\": [\"google_ad_manager\"],\n  \"adFormats\": [\n    \"mrec-cascade-first\",\n    \"persistent-ad-banner\",\n    \"banner-non-chat-environment\",\n    \"banner-chatroom-top\",\n    \"chat_interstitial_on_close\",\n    \"chat_interstitial_on_open\",\n    \"profile_interstitial_on_open\",\n    \"profile_interstitial_on_close\",\n    \"interest_to_cascade_interstitial_on_close\",\n  ],\n  \"viewabilityImpressionDelayMs\": 2000,\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "6HQAleumxW48vEepsx1k6W:100.00:5",
+        "baseID": "6HQAleumxW48vEepsx1k6W",
+        "name": "Dev - On",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "app_version",
+            "targetValue": "25.13",
+            "operator": "version_gte"
+          },
+          {
+            "type": "os_name",
+            "targetValue": [
+              "Android"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "networks": [
+            "google_ad_manager"
+          ],
+          "adFormats": [
+            "mrec-cascade-first",
+            "mrec-cascade-second",
+            "persistent-ad-banner",
+            "banner-non-chat-environment",
+            "banner-chatroom-top",
+            "chat_interstitial_on_close",
+            "chat_interstitial_on_open",
+            "profile_interstitial_on_open",
+            "profile_interstitial_on_close",
+            "interest_to_cascade_interstitial_on_close"
+          ],
+          "viewabilityImpressionDelayMs": 2000
+        },
+        "returnValueJson5": "{\n  \"networks\": [\"google_ad_manager\"],\n  \"adFormats\": [\n    \"mrec-cascade-first\",\n    \"mrec-cascade-second\",\n    \"persistent-ad-banner\",\n    \"banner-non-chat-environment\",\n    \"banner-chatroom-top\",\n    \"chat_interstitial_on_close\",\n    \"chat_interstitial_on_open\",\n    \"profile_interstitial_on_open\",\n    \"profile_interstitial_on_close\",\n    \"interest_to_cascade_interstitial_on_close\",\n  ],\n  \"viewabilityImpressionDelayMs\": 2000,\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "7aJkqA8NaKqPr0XGbqnV2P",
+        "baseID": "7aJkqA8NaKqPr0XGbqnV2P",
+        "name": "Prod- Off",
+        "passPercentage": 0,
+        "conditions": [
+          {
+            "type": "app_version",
+            "targetValue": "25.13",
+            "operator": "version_gte"
+          }
+        ],
+        "returnValue": {
+          "networks": [
+            "google_ad_manager"
+          ],
+          "adFormats": [
+            "mrec-cascade-first",
+            "persistent-ad-banner",
+            "banner-non-chat-environment",
+            "banner-chatroom-top",
+            "chat_interstitial_on_close",
+            "chat_interstitial_on_open",
+            "profile_interstitial_on_open",
+            "profile_interstitial_on_close",
+            "interest_to_cascade_interstitial_on_close"
+          ],
+          "viewabilityImpressionDelayMs": 2000
+        },
+        "returnValueJson5": "{\n  \"networks\": [\"google_ad_manager\"],\n  \"adFormats\": [\n    \"mrec-cascade-first\",\n    \"persistent-ad-banner\",\n    \"banner-non-chat-environment\",\n    \"banner-chatroom-top\",\n    \"chat_interstitial_on_close\",\n    \"chat_interstitial_on_open\",\n    \"profile_interstitial_on_open\",\n    \"profile_interstitial_on_close\",\n    \"interest_to_cascade_interstitial_on_close\",\n  ],\n  \"viewabilityImpressionDelayMs\": 2000,\n}\n",
+        "environments": [
+          "production"
+        ]
+      }
+    ],
+    "defaultValue": {},
+    "defaultValueJson5": "//Add your Dynamic Config below\n{}\n",
+    "version": 51
+  },
+  {
+    "id": "mrec-cascade-second",
+    "name": "mrec-cascade-second",
+    "description": "Toggle ad for second mrec",
+    "idType": "profileId",
+    "lastModifierID": "71ZULjJBXUdzlXTRxdlbQB",
+    "lastModifiedTime": 1749582144505,
+    "lastModifierName": "ricardo.calero ",
+    "lastModifierEmail": "ricardo.calero@team.grindr.com",
+    "creatorID": "4QiHFqH4qVMdS2dVYVr26L",
+    "createdTime": 1744750863292,
+    "creatorName": "Andres Atehortua",
+    "creatorEmail": "andres.atehortua@team.grindr.com",
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [
+      "Ads"
+    ],
+    "team": null,
+    "owner": {
+      "ownerID": "4QiHFqH4qVMdS2dVYVr26L",
+      "ownerType": "USER",
+      "ownerName": "Andres Atehortua",
+      "ownerEmail": "andres.atehortua@team.grindr.com"
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "5fHQMioAwyoVRqD7Vucvhh",
+        "baseID": "5fHQMioAwyoVRqD7Vucvhh",
+        "name": "Development - Android",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "os_name",
+            "targetValue": [
+              "Android"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 14
+        },
+        "returnValueJson5": "{\n  \"isHardRefreshEnabled\": true,\n  \"getHardRefreshSeconds\": 14,\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "2u2ybv8lS4qAFCzNt2qlBq",
+        "baseID": "2u2ybv8lS4qAFCzNt2qlBq",
+        "name": "Development - iOS",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "os_name",
+            "targetValue": [
+              "iOS"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 14
+        },
+        "returnValueJson5": "{\n  \"isHardRefreshEnabled\": true,\n  \"getHardRefreshSeconds\": 14,\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "5fHQMk3CYQyqaQb3wC88Aj",
+        "baseID": "5fHQMk3CYQyqaQb3wC88Aj",
+        "name": "Production - Everyone",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 30
+        },
+        "returnValueJson5": "{\n  \"isHardRefreshEnabled\": true,\n  \"getHardRefreshSeconds\": 30,\n}\n",
+        "environments": [
+          "production"
+        ]
+      }
+    ],
+    "defaultValue": {},
+    "defaultValueJson5": "//Add your Dynamic Config below\n\n{}\n",
+    "version": 4
+  },
+  {
+    "id": "mrec-cascade-first",
+    "name": "mrec-cascade-first",
+    "description": "Toggle ad for first mrec",
+    "idType": "profileId",
+    "lastModifierID": "7C0mjI9kZMWDF2QVjqR15o",
+    "lastModifiedTime": 1749059349952,
+    "lastModifierName": "Luis Salinas",
+    "lastModifierEmail": "luis.salinas@team.grindr.com",
+    "creatorID": "4QiHFqH4qVMdS2dVYVr26L",
+    "createdTime": 1744750514393,
+    "creatorName": "Andres Atehortua",
+    "creatorEmail": "andres.atehortua@team.grindr.com",
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [
+      "Ads"
+    ],
+    "team": null,
+    "owner": {
+      "ownerID": "4QiHFqH4qVMdS2dVYVr26L",
+      "ownerType": "USER",
+      "ownerName": "Andres Atehortua",
+      "ownerEmail": "andres.atehortua@team.grindr.com"
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "19hDabQd96NIUz8MovbB59",
+        "baseID": "19hDabQd96NIUz8MovbB59",
+        "name": "Development - Android",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "os_name",
+            "targetValue": [
+              "Android"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 10
+        },
+        "returnValueJson5": "{\n  \"isHardRefreshEnabled\": true,\n  \"getHardRefreshSeconds\": 10,\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "1HyityHTqw4Kr2Er7K22Ob",
+        "baseID": "1HyityHTqw4Kr2Er7K22Ob",
+        "name": "Development - iOS",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "os_name",
+            "targetValue": [
+              "iOS"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 10
+        },
+        "returnValueJson5": "{\n  \"isHardRefreshEnabled\": true,\n  \"getHardRefreshSeconds\": 10,\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "19hDadvfBoXddYGHZD7eob",
+        "baseID": "19hDadvfBoXddYGHZD7eob",
+        "name": "Production - Everyone",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 30
+        },
+        "returnValueJson5": "{\n  \"isHardRefreshEnabled\": true,\n  \"getHardRefreshSeconds\": 30,\n}\n",
+        "environments": [
+          "production"
+        ]
+      }
+    ],
+    "defaultValue": {},
+    "defaultValueJson5": "//Add your Dynamic Config below\n\n{}\n",
+    "version": 3
+  },
+  {
+    "id": "persistent-ad-banner",
+    "name": "persistent-ad-banner",
+    "description": "Toggle persistent ad banner found throughout the app",
+    "idType": "profileId",
+    "lastModifierID": "7C0mjI9kZMWDF2QVjqR15o",
+    "lastModifiedTime": 1749059199221,
+    "lastModifierName": "Luis Salinas",
+    "lastModifierEmail": "luis.salinas@team.grindr.com",
+    "creatorID": "4QiHFqH4qVMdS2dVYVr26L",
+    "createdTime": 1744749828945,
+    "creatorName": "Andres Atehortua",
+    "creatorEmail": "andres.atehortua@team.grindr.com",
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [
+      "Ads"
+    ],
+    "team": null,
+    "owner": {
+      "ownerID": "4QiHFqH4qVMdS2dVYVr26L",
+      "ownerType": "USER",
+      "ownerName": "Andres Atehortua",
+      "ownerEmail": "andres.atehortua@team.grindr.com"
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "4cly09fWZnCSyvUD31VDYI",
+        "baseID": "4cly09fWZnCSyvUD31VDYI",
+        "name": "Development - Android",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "os_name",
+            "targetValue": [
+              "Android"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 14
+        },
+        "returnValueJson5": "{\n  \"isHardRefreshEnabled\": true,\n  \"getHardRefreshSeconds\": 14,\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "6L50I4v7icgZ3AXErqf7Kr",
+        "baseID": "6L50I4v7icgZ3AXErqf7Kr",
+        "name": "Development - iOS",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "os_name",
+            "targetValue": [
+              "iOS"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 14
+        },
+        "returnValueJson5": "{\n  \"isHardRefreshEnabled\": true,\n  \"getHardRefreshSeconds\": 14,\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "4cly0aUZrFMmRVsyE9RhhK",
+        "baseID": "4cly0aUZrFMmRVsyE9RhhK",
+        "name": "Production - Everyone",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 14
+        },
+        "returnValueJson5": "{\n  \"isHardRefreshEnabled\": true,\n  \"getHardRefreshSeconds\": 14,\n}\n",
+        "environments": [
+          "production"
+        ]
+      }
+    ],
+    "defaultValue": {},
+    "defaultValueJson5": "//Add your Dynamic Config below\n\n{}\n",
+    "version": 4
+  },
+  {
+    "id": "ads-gam-retry-enabled",
+    "name": "ads-gam-retry-enabled",
+    "description": "",
+    "idType": "profileId",
+    "lastModifierID": "6m6y0CXIECbQLTdsuhCeYH",
+    "lastModifiedTime": 1749752095688,
+    "lastModifierName": "Tsung-Yu Lee",
+    "lastModifierEmail": "tsung-yu.lee@grindr.com",
+    "creatorID": "71ZULjJBXUdzlXTRxdlbQB",
+    "createdTime": 1744143420878,
+    "creatorName": "ricardo.calero ",
+    "creatorEmail": "ricardo.calero@team.grindr.com",
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [
+      "Ads"
+    ],
+    "team": null,
+    "owner": {
+      "ownerID": "71ZULjJBXUdzlXTRxdlbQB",
+      "ownerType": "USER",
+      "ownerName": "ricardo.calero ",
+      "ownerEmail": "ricardo.calero@team.grindr.com"
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "1x69bSpropBgdi7MGEDhya:100.00:1",
+        "baseID": "1x69bSpropBgdi7MGEDhya",
+        "name": "Override User Fail",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "custom_field",
+            "targetValue": [
+              "698603496",
+              "133984401"
+            ],
+            "operator": "any",
+            "field": "profileId"
+          }
+        ],
+        "returnValue": {
+          "maxRetries": 1
+        },
+        "returnValueJson5": "{\n  \"maxRetries\": 1,\n}\n",
+        "environments": [
+          "development",
+          "production"
+        ]
+      },
+      {
+        "id": "1x69bU4tQHKKwHFIhMyURc",
+        "baseID": "1x69bU4tQHKKwHFIhMyURc",
+        "name": "Dev On",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "maxRetries": 5
+        },
+        "returnValueJson5": "{\n  \"maxRetries\": 5,\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "1x69bVJwiZUeQ7dDSUuyae:100.00:1",
+        "baseID": "1x69bVJwiZUeQ7dDSUuyae",
+        "name": "Prod On",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "maxRetries": 5
+        },
+        "returnValueJson5": "{\n  \"maxRetries\": 5,\n}\n",
+        "environments": [
+          "production"
+        ]
+      }
+    ],
+    "defaultValue": {},
+    "defaultValueJson5": "//Add your Dynamic Config below\n{}\n",
+    "schema": "{\"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{}}",
+    "schemaJson5": "{\n  \"$schema\": \"https://json-schema.org/draft/2020-12/schema\",\n  \"properties\": {\n    // Define fields here to start writing your first schema\n  },\n}\n",
+    "version": 16
+  },
+  {
+    "id": "side-profile-link",
+    "name": "side-profile-link",
+    "description": "Custom link to display in the side menu.  Currently used to show \"Free HIV Home Test\" to users in the US; \"Mpox Resources\" everywhere else; and \"Mpox Resources\" as a fallback.",
+    "idType": "profileId",
+    "lastModifierID": "72gII7pK8pL0BZuoNG3e8x",
+    "lastModifiedTime": 1753809898762,
+    "lastModifierName": "trevor.noon ",
+    "lastModifierEmail": "trevor.noon@team.grindr.com",
+    "creatorID": "4QiHFqH4qVMdS2dVYVr26L",
+    "createdTime": 1742320273442,
+    "creatorName": "Andres Atehortua",
+    "creatorEmail": "andres.atehortua@team.grindr.com",
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [],
+    "team": null,
+    "owner": {
+      "ownerID": "4QiHFqH4qVMdS2dVYVr26L",
+      "ownerType": "USER",
+      "ownerName": "Andres Atehortua",
+      "ownerEmail": "andres.atehortua@team.grindr.com"
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "4y81bSUTTod3xiFUO5tCJl",
+        "baseID": "4y81bSUTTod3xiFUO5tCJl",
+        "name": "United States (take-me-home)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "US"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a",
+          "bn": "\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be",
+          "de": "Gratis HIV Test f\u00fcr Zuhause",
+          "en": "Free HIV Home Test",
+          "es": "Auto Prueba de VIH",
+          "fr": "Test HIV gratuit chez soi",
+          "hi": "\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a",
+          "id": "Tes HIV Mandiri Gratis",
+          "it": "Autotest HIV gratuito",
+          "ja": "\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb",
+          "ko": "\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8",
+          "ms": "Ujian HIV Percuma Di Rumah",
+          "pt": "Autoteste para HIV Gr\u00e1tis",
+          "ru": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430",
+          "sw": "Kipimo cha bure cha nyumbani cha HIV",
+          "te": "\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37",
+          "th": "\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35",
+          "tl": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "vi": "X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://together.takemehome.org/?utm_source=grindr1",
+          "es-419": "Auto Prueba de VIH",
+          "zh-chs": "\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5",
+          "zh-cht": "\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a\",\n  \"bn\": \"\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be\",\n  \"de\": \"Gratis HIV Test f\u00fcr Zuhause\",\n  \"en\": \"Free HIV Home Test\",\n  \"es\": \"Auto Prueba de VIH\",\n  \"fr\": \"Test HIV gratuit chez soi\",\n  \"hi\": \"\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a\",\n  \"id\": \"Tes HIV Mandiri Gratis\",\n  \"it\": \"Autotest HIV gratuito\",\n  \"ja\": \"\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb\",\n  \"ko\": \"\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8\",\n  \"ms\": \"Ujian HIV Percuma Di Rumah\",\n  \"pt\": \"Autoteste para HIV Gr\u00e1tis\",\n  \"ru\": \"\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430\",\n  \"sw\": \"Kipimo cha bure cha nyumbani cha HIV\",\n  \"te\": \"\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37\",\n  \"th\": \"\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35\",\n  \"tl\": \"Libreng Pagsusuri ng HIV sa Tahanan\",\n  \"vi\": \"X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed\",\n  \"fil\": \"Libreng Pagsusuri ng HIV sa Tahanan\",\n  \"url\": \"https://together.takemehome.org/?utm_source=grindr1\",\n  \"es-419\": \"Auto Prueba de VIH\",\n  \"zh-chs\": \"\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5\",\n  \"zh-cht\": \"\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y89PZvgBd9tulwby15iav",
+        "baseID": "4y89PZvgBd9tulwby15iav",
+        "name": "Ireland  - HIV (take-me-home-ireland)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "IE"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a",
+          "bn": "\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be",
+          "de": "Gratis HIV Test f\u00fcr Zuhause",
+          "en": "Free HIV Home Test",
+          "es": "Auto Prueba de VIH",
+          "fr": "Test HIV gratuit chez soi",
+          "hi": "\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a",
+          "id": "Tes HIV Mandiri Gratis",
+          "it": "Autotest HIV gratuito",
+          "ja": "\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb",
+          "ko": "\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8",
+          "ms": "Ujian HIV Percuma Di Rumah",
+          "pt": "Autoteste para HIV Gr\u00e1tis",
+          "ru": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430",
+          "sw": "Kipimo cha bure cha nyumbani cha HIV",
+          "te": "\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37",
+          "th": "\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35",
+          "tl": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "vi": "X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://mpower.hivireland.ie/self-test-order/?utm_source=grindr&utm_medium=app&utm_campaign=button&utm_term=direct_click",
+          "es-419": "Auto Prueba de VIH",
+          "zh-chs": "\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5",
+          "zh-cht": "\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a\",\n  \"bn\": \"\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be\",\n  \"de\": \"Gratis HIV Test f\u00fcr Zuhause\",\n  \"en\": \"Free HIV Home Test\",\n  \"es\": \"Auto Prueba de VIH\",\n  \"fr\": \"Test HIV gratuit chez soi\",\n  \"hi\": \"\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a\",\n  \"id\": \"Tes HIV Mandiri Gratis\",\n  \"it\": \"Autotest HIV gratuito\",\n  \"ja\": \"\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb\",\n  \"ko\": \"\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8\",\n  \"ms\": \"Ujian HIV Percuma Di Rumah\",\n  \"pt\": \"Autoteste para HIV Gr\u00e1tis\",\n  \"ru\": \"\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430\",\n  \"sw\": \"Kipimo cha bure cha nyumbani cha HIV\",\n  \"te\": \"\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37\",\n  \"th\": \"\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35\",\n  \"tl\": \"Libreng Pagsusuri ng HIV sa Tahanan\",\n  \"vi\": \"X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed\",\n  \"fil\": \"Libreng Pagsusuri ng HIV sa Tahanan\",\n  \"url\": \"https://mpower.hivireland.ie/self-test-order/?utm_source=grindr&utm_medium=app&utm_campaign=button&utm_term=direct_click\",\n  \"es-419\": \"Auto Prueba de VIH\",\n  \"zh-chs\": \"\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5\",\n  \"zh-cht\": \"\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y89Q1aj3viXNL47990Vtx",
+        "baseID": "4y89Q1aj3viXNL47990Vtx",
+        "name": "Georgia - HIV (take-me-home-georgia)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "GE"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "bn": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "de": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "en": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "es": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "fr": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "hi": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "id": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "it": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "ja": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "ko": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "ms": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "pt": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "ru": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "sw": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "te": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "th": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "tl": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "vi": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "fil": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "url": "https://selftest.ge/ka/grindr",
+          "es-419": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "zh-chs": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0",
+          "zh-cht": "\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"bn\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"de\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"en\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"es\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"fr\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"hi\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"id\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"it\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"ja\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"ko\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"ms\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"pt\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"ru\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"sw\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"te\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"th\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"tl\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"vi\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"fil\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"url\": \"https://selftest.ge/ka/grindr\",\n  \"es-419\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"zh-chs\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n  \"zh-cht\": \"\u10e3\u10e4\u10d0\u10e1\u10dd \u10d0\u10d8\u10d5 \u10e2\u10d4\u10e1\u10e2\u10d8\u10e0\u10d4\u10d1\u10d0\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y8ea2NrX7CGsRWjUYT7T5",
+        "baseID": "4y8ea2NrX7CGsRWjUYT7T5",
+        "name": "New Zealand (takemehome-nz)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "NZ"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a",
+          "bn": "\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be",
+          "de": "Gratis HIV Test f\u00fcr Zuhause",
+          "en": "Free HIV Self-Test",
+          "es": "Auto Prueba de VIH",
+          "fr": "Test HIV gratuit chez soi",
+          "hi": "\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a",
+          "id": "Tes HIV Mandiri Gratis",
+          "it": "Autotest HIV gratuito",
+          "ja": "\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb",
+          "ko": "\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8",
+          "ms": "Ujian HIV Percuma Di Rumah",
+          "pt": "Autoteste para HIV Gr\u00e1tis",
+          "ru": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430",
+          "sw": "Kipimo cha bure cha nyumbani cha HIV",
+          "te": "\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37",
+          "th": "\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35",
+          "tl": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "vi": "X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://portal.burnettfoundation.org.nz/free-hiv-self-test-kit-on-grindr",
+          "es-419": "Auto Prueba de VIH",
+          "zh-chs": "\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5",
+          "zh-cht": "\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a\",\n  \"bn\": \"\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be\",\n  \"de\": \"Gratis HIV Test f\u00fcr Zuhause\",\n  \"en\": \"Free HIV Self-Test\",\n  \"es\": \"Auto Prueba de VIH\",\n  \"fr\": \"Test HIV gratuit chez soi\",\n  \"hi\": \"\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a\",\n  \"id\": \"Tes HIV Mandiri Gratis\",\n  \"it\": \"Autotest HIV gratuito\",\n  \"ja\": \"\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb\",\n  \"ko\": \"\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8\",\n  \"ms\": \"Ujian HIV Percuma Di Rumah\",\n  \"pt\": \"Autoteste para HIV Gr\u00e1tis\",\n  \"ru\": \"\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430\",\n  \"sw\": \"Kipimo cha bure cha nyumbani cha HIV\",\n  \"te\": \"\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37\",\n  \"th\": \"\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35\",\n  \"tl\": \"Libreng Pagsusuri ng HIV sa Tahanan\",\n  \"vi\": \"X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed\",\n  \"fil\": \"Libreng Pagsusuri ng HIV sa Tahanan\",\n  \"url\": \"https://portal.burnettfoundation.org.nz/free-hiv-self-test-kit-on-grindr\",\n  \"es-419\": \"Auto Prueba de VIH\",\n  \"zh-chs\": \"\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5\",\n  \"zh-cht\": \"\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y8iu65Dj25TromshWGXBF",
+        "baseID": "4y8iu65Dj25TromshWGXBF",
+        "name": "London Only (sti-take-home-london)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "GB"
+            ],
+            "operator": "any"
+          },
+          {
+            "type": "custom_field",
+            "targetValue": [
+              "London"
+            ],
+            "operator": "any",
+            "field": "city"
+          }
+        ],
+        "returnValue": {
+          "ar": "\ufeff\u0645\u062c\u0645\u0648\u0639\u0629 \u0645\u062c\u0627\u0646\u064a\u0629 \u0644\u0623\u062f\u0648\u0627\u062a \u0641\u062d\u0635 \u0627\u0644\u0639\u062f\u0648\u0649 \u0627\u0644\u0645\u0646\u0642\u0648\u0644\u0629 \u062c\u0646\u0633\u064a\u0627\u064b",
+          "bn": "\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7\u09b0 \u09af\u09cc\u09a8\u09ac\u09be\u09b9\u09bf\u09a4 \u09b8\u0982\u0995\u09cd\u09b0\u09ae\u09a3 (STI \u0995\u09bf\u099f",
+          "de": "Kostenloses STI-Kit",
+          "en": "Free STI Kit",
+          "es": "Kit de ITS gratuito",
+          "fr": "Kit gratuit de d\u00e9pistage des IST",
+          "hi": "\u092f\u094c\u0928-\u0938\u0902\u091a\u0930\u093f\u0924 \u0938\u0902\u0915\u094d\u0930\u092e\u0923\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f \u092e\u0941\u095e\u094d\u0924 \u0915\u093f\u091f",
+          "id": "Perlengkapan IMS Gratis",
+          "it": "Kit IST gratuito",
+          "ja": "\u6027\u611f\u67d3\u75c7\u7121\u6599\u691c\u67fb\u30ad\u30c3\u30c8",
+          "ko": "\ubb34\ub8cc STI \ud0a4\ud2b8",
+          "ms": "Kit Ujian Jangkitan Seksual (STI) Percuma",
+          "pt": "Kit de IST gratuito",
+          "ru": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u043d\u0430\u0431\u043e\u0440 \u0434\u043b\u044f \u0442\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u043d\u0430 \u0418\u041f\u041f\u041f",
+          "sw": "Kipimo cha STI Bila Malipo",
+          "te": "\u0c09\u0c1a\u0c3f\u0c24 \u0c32\u0c48\u0c02\u0c17\u0c3f\u0c15\u0c02\u0c17\u0c3e \u0c38\u0c02\u0c15\u0c4d\u0c30\u0c2e\u0c3f\u0c02\u0c1a\u0c47 \u0c35\u0c4d\u0c2f\u0c3e\u0c27\u0c3f(STI) \u0c15\u0c3f\u0c1f\u0c4d\u200c",
+          "th": "\u0e0a\u0e38\u0e14\u0e15\u0e23\u0e27\u0e08\u0e42\u0e23\u0e04\u0e15\u0e34\u0e14\u0e15\u0e48\u0e2d\u0e17\u0e32\u0e07\u0e40\u0e1e\u0e28\u0e2a\u0e31\u0e21\u0e1e\u0e31\u0e19\u0e18\u0e4c\u0e1f\u0e23\u0e35",
+          "vi": "B\u1ed9 d\u1ee5ng c\u1ee5 B\u1ec7nh l\u00e2y truy\u1ec1n qua \u0111\u01b0\u1eddng t\u00ecnh d\u1ee5c mi\u1ec5n ph\u00ed",
+          "fil": "Libreng Pagsusuri ng STI sa Tahanan",
+          "tlh": "Libreng Kit para sa sakit na nakukuha sa pakikipagtalik o STI",
+          "url": "https://grindr.shl.uk/",
+          "zh-cn": "\u514d\u8d39\u7684\u9884\u9632\u6027\u4f20\u64ad\u611f\u67d3 (STI) \u5de5\u5177\u5305",
+          "zh-tw": "\u514d\u8cbb\u6027\u50b3\u64ad\u611f\u67d3 (STI) \u5957\u7d44"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"\ufeff\u0645\u062c\u0645\u0648\u0639\u0629 \u0645\u062c\u0627\u0646\u064a\u0629 \u0644\u0623\u062f\u0648\u0627\u062a \u0641\u062d\u0635 \u0627\u0644\u0639\u062f\u0648\u0649 \u0627\u0644\u0645\u0646\u0642\u0648\u0644\u0629 \u062c\u0646\u0633\u064a\u0627\u064b\",\n  \"bn\": \"\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7\u09b0 \u09af\u09cc\u09a8\u09ac\u09be\u09b9\u09bf\u09a4 \u09b8\u0982\u0995\u09cd\u09b0\u09ae\u09a3 (STI \u0995\u09bf\u099f\",\n  \"de\": \"Kostenloses STI-Kit\",\n  \"en\": \"Free STI Kit\",\n  \"es\": \"Kit de ITS gratuito\",\n  \"fr\": \"Kit gratuit de d\u00e9pistage des IST\",\n  \"hi\": \"\u092f\u094c\u0928-\u0938\u0902\u091a\u0930\u093f\u0924 \u0938\u0902\u0915\u094d\u0930\u092e\u0923\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f \u092e\u0941\u095e\u094d\u0924 \u0915\u093f\u091f\",\n  \"id\": \"Perlengkapan IMS Gratis\",\n  \"it\": \"Kit IST gratuito\",\n  \"ja\": \"\u6027\u611f\u67d3\u75c7\u7121\u6599\u691c\u67fb\u30ad\u30c3\u30c8\",\n  \"ko\": \"\ubb34\ub8cc STI \ud0a4\ud2b8\",\n  \"ms\": \"Kit Ujian Jangkitan Seksual (STI) Percuma\",\n  \"pt\": \"Kit de IST gratuito\",\n  \"ru\": \"\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u043d\u0430\u0431\u043e\u0440 \u0434\u043b\u044f \u0442\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u043d\u0430 \u0418\u041f\u041f\u041f\",\n  \"sw\": \"Kipimo cha STI Bila Malipo\",\n  \"te\": \"\u0c09\u0c1a\u0c3f\u0c24 \u0c32\u0c48\u0c02\u0c17\u0c3f\u0c15\u0c02\u0c17\u0c3e \u0c38\u0c02\u0c15\u0c4d\u0c30\u0c2e\u0c3f\u0c02\u0c1a\u0c47 \u0c35\u0c4d\u0c2f\u0c3e\u0c27\u0c3f(STI) \u0c15\u0c3f\u0c1f\u0c4d\u200c\",\n  \"th\": \"\u0e0a\u0e38\u0e14\u0e15\u0e23\u0e27\u0e08\u0e42\u0e23\u0e04\u0e15\u0e34\u0e14\u0e15\u0e48\u0e2d\u0e17\u0e32\u0e07\u0e40\u0e1e\u0e28\u0e2a\u0e31\u0e21\u0e1e\u0e31\u0e19\u0e18\u0e4c\u0e1f\u0e23\u0e35\",\n  \"vi\": \"B\u1ed9 d\u1ee5ng c\u1ee5 B\u1ec7nh l\u00e2y truy\u1ec1n qua \u0111\u01b0\u1eddng t\u00ecnh d\u1ee5c mi\u1ec5n ph\u00ed\",\n  \"fil\": \"Libreng Pagsusuri ng STI sa Tahanan\",\n  \"tlh\": \"Libreng Kit para sa sakit na nakukuha sa pakikipagtalik o STI\",\n  \"url\": \"https://grindr.shl.uk/\",\n  \"zh-cn\": \"\u514d\u8d39\u7684\u9884\u9632\u6027\u4f20\u64ad\u611f\u67d3 (STI) \u5de5\u5177\u5305\",\n  \"zh-tw\": \"\u514d\u8cbb\u6027\u50b3\u64ad\u611f\u67d3 (STI) \u5957\u7d44\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y8mO9nOEWz6pUMAEUuNkf",
+        "baseID": "4y8mO9nOEWz6pUMAEUuNkf",
+        "name": "Czechia Take Me Home HIV (takemehome-czechia)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "CZ"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629",
+          "bn": "\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8",
+          "de": "Einen HIV-Test machen",
+          "en": "Find an STI Test",
+          "es": "H\u00e1zte la prueba del VIH",
+          "fr": "Faire un test de d\u00e9pistage du VIH",
+          "hi": "\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902",
+          "id": "Lakukan Tes HIV",
+          "it": "Sottoponiti a un test HIV",
+          "ja": "HIV\u691c\u67fb\u3092\u53d7\u3051\u308b",
+          "ko": "HIV \uac80\uc0ac \ubc1b\uae30",
+          "ms": "Dapatkan Ujian HIV",
+          "pt": "Fa\u00e7a um teste de HIV",
+          "ru": "\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427",
+          "sw": "Fanya Kipimo cha VVU",
+          "te": "\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f",
+          "th": "\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35",
+          "tl": "Magpa-HIV Test",
+          "vi": "X\u00e9t nghi\u1ec7m HIV",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://www.hiv-testovani.cz/?utm_source=grindr&utm_medium=grindr&utm_campaign=button",
+          "es-419": "H\u00e1gase una prueba de VIH",
+          "zh-chs": "\u505a\u4e00\u4e2a HIV \u68c0\u6d4b",
+          "zh-cht": "\u9032\u884c HIV \u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629\",\n  \"bn\": \"\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8\",\n  \"de\": \"Einen HIV-Test machen\",\n  \"en\": \"Find an STI Test\",\n  \"es\": \"H\u00e1zte la prueba del VIH\",\n  \"fr\": \"Faire un test de d\u00e9pistage du VIH\",\n  \"hi\": \"\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902\",\n  \"id\": \"Lakukan Tes HIV\",\n  \"it\": \"Sottoponiti a un test HIV\",\n  \"ja\": \"HIV\u691c\u67fb\u3092\u53d7\u3051\u308b\",\n  \"ko\": \"HIV \uac80\uc0ac \ubc1b\uae30\",\n  \"ms\": \"Dapatkan Ujian HIV\",\n  \"pt\": \"Fa\u00e7a um teste de HIV\",\n  \"ru\": \"\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427\",\n  \"sw\": \"Fanya Kipimo cha VVU\",\n  \"te\": \"\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f\",\n  \"th\": \"\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35\",\n  \"tl\": \"Magpa-HIV Test\",\n  \"vi\": \"X\u00e9t nghi\u1ec7m HIV\",\n  \"fil\": \"Libreng Pagsusuri ng HIV sa Tahanan\",\n  \"url\": \"https://www.hiv-testovani.cz/?utm_source=grindr&utm_medium=grindr&utm_campaign=button\",\n  \"es-419\": \"H\u00e1gase una prueba de VIH\",\n  \"zh-chs\": \"\u505a\u4e00\u4e2a HIV \u68c0\u6d4b\",\n  \"zh-cht\": \"\u9032\u884c HIV \u6aa2\u6e2c\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y8mOb2R7eIAJkkwg2qqDh",
+        "baseID": "4y8mOb2R7eIAJkkwg2qqDh",
+        "name": "UK Take Me Home HIV (takemehome-uk)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "GB"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629",
+          "bn": "\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8",
+          "de": "Einen HIV-Test machen",
+          "en": "Sexual Health Resources",
+          "es": "H\u00e1zte la prueba del VIH",
+          "fr": "Faire un test de d\u00e9pistage du VIH",
+          "hi": "\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902",
+          "id": "Lakukan Tes HIV",
+          "it": "Sottoponiti a un test HIV",
+          "ja": "HIV\u691c\u67fb\u3092\u53d7\u3051\u308b",
+          "ko": "HIV \uac80\uc0ac \ubc1b\uae30",
+          "ms": "Dapatkan Ujian HIV",
+          "pt": "Fa\u00e7a um teste de HIV",
+          "ru": "\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427",
+          "sw": "Fanya Kipimo cha VVU",
+          "te": "\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f",
+          "th": "\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35",
+          "tl": "Magpa-HIV Test",
+          "vi": "X\u00e9t nghi\u1ec7m HIV",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://www.queerhealth.info/",
+          "es-419": "H\u00e1gase una prueba de VIH",
+          "zh-chs": "\u505a\u4e00\u4e2a HIV \u68c0\u6d4b",
+          "zh-cht": "\u9032\u884c HIV \u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629\",\n  \"bn\": \"\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8\",\n  \"de\": \"Einen HIV-Test machen\",\n  \"en\": \"Sexual Health Resources\",\n  \"es\": \"H\u00e1zte la prueba del VIH\",\n  \"fr\": \"Faire un test de d\u00e9pistage du VIH\",\n  \"hi\": \"\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902\",\n  \"id\": \"Lakukan Tes HIV\",\n  \"it\": \"Sottoponiti a un test HIV\",\n  \"ja\": \"HIV\u691c\u67fb\u3092\u53d7\u3051\u308b\",\n  \"ko\": \"HIV \uac80\uc0ac \ubc1b\uae30\",\n  \"ms\": \"Dapatkan Ujian HIV\",\n  \"pt\": \"Fa\u00e7a um teste de HIV\",\n  \"ru\": \"\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427\",\n  \"sw\": \"Fanya Kipimo cha VVU\",\n  \"te\": \"\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f\",\n  \"th\": \"\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35\",\n  \"tl\": \"Magpa-HIV Test\",\n  \"vi\": \"X\u00e9t nghi\u1ec7m HIV\",\n  \"fil\": \"Libreng Pagsusuri ng HIV sa Tahanan\",\n  \"url\": \"https://www.queerhealth.info/\",\n  \"es-419\": \"H\u00e1gase una prueba de VIH\",\n  \"zh-chs\": \"\u505a\u4e00\u4e2a HIV \u68c0\u6d4b\",\n  \"zh-cht\": \"\u9032\u884c HIV \u6aa2\u6e2c\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y8r8cG00R2jorcJ1SiD2P",
+        "baseID": "4y8r8cG00R2jorcJ1SiD2P",
+        "name": "European Take Me Home HIV (takemehome-european)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "BE",
+              "HR",
+              "DK",
+              "EE",
+              "DE",
+              "IT",
+              "KZ",
+              "LV",
+              "LT",
+              "LU",
+              "MT",
+              "NL",
+              "PL",
+              "PT",
+              "RS",
+              "SK",
+              "ES",
+              "SE",
+              "CH",
+              "UA",
+              "AT",
+              "FR",
+              "CY"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629",
+          "bn": "\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8",
+          "de": "Einen HIV-Test machen",
+          "en": "Find an HIV Test",
+          "es": "H\u00e1zte la prueba del VIH",
+          "fr": "Faire un test de d\u00e9pistage du VIH",
+          "hi": "\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902",
+          "id": "Lakukan Tes HIV",
+          "it": "Sottoponiti a un test HIV",
+          "ja": "HIV\u691c\u67fb\u3092\u53d7\u3051\u308b",
+          "ko": "HIV \uac80\uc0ac \ubc1b\uae30",
+          "ms": "Dapatkan Ujian HIV",
+          "pt": "Fa\u00e7a um teste de HIV",
+          "ru": "\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427",
+          "sw": "Fanya Kipimo cha VVU",
+          "te": "\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f",
+          "th": "\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35",
+          "tl": "Magpa-HIV Test",
+          "vi": "X\u00e9t nghi\u1ec7m HIV",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://testfinder.info/?utm_campaign=grindr_ad&utm_medium=ad&utm_source=grindr",
+          "es-419": "H\u00e1gase una prueba de VIH",
+          "zh-chs": "\u505a\u4e00\u4e2a HIV \u68c0\u6d4b",
+          "zh-cht": "\u9032\u884c HIV \u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629\",\n  \"bn\": \"\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8\",\n  \"de\": \"Einen HIV-Test machen\",\n  \"en\": \"Find an HIV Test\",\n  \"es\": \"H\u00e1zte la prueba del VIH\",\n  \"fr\": \"Faire un test de d\u00e9pistage du VIH\",\n  \"hi\": \"\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902\",\n  \"id\": \"Lakukan Tes HIV\",\n  \"it\": \"Sottoponiti a un test HIV\",\n  \"ja\": \"HIV\u691c\u67fb\u3092\u53d7\u3051\u308b\",\n  \"ko\": \"HIV \uac80\uc0ac \ubc1b\uae30\",\n  \"ms\": \"Dapatkan Ujian HIV\",\n  \"pt\": \"Fa\u00e7a um teste de HIV\",\n  \"ru\": \"\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427\",\n  \"sw\": \"Fanya Kipimo cha VVU\",\n  \"te\": \"\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f\",\n  \"th\": \"\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35\",\n  \"tl\": \"Magpa-HIV Test\",\n  \"vi\": \"X\u00e9t nghi\u1ec7m HIV\",\n  \"fil\": \"Libreng Pagsusuri ng HIV sa Tahanan\",\n  \"url\": \"https://testfinder.info/?utm_campaign=grindr_ad&utm_medium=ad&utm_source=grindr\",\n  \"es-419\": \"H\u00e1gase una prueba de VIH\",\n  \"zh-chs\": \"\u505a\u4e00\u4e2a HIV \u68c0\u6d4b\",\n  \"zh-cht\": \"\u9032\u884c HIV \u6aa2\u6e2c\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y8vsfYbmLvwmXCRoQ6sLp",
+        "baseID": "4y8vsfYbmLvwmXCRoQ6sLp",
+        "name": "Namibia Take Me Home HIV (takemehome-namibia)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "NA"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629",
+          "bn": "\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8",
+          "de": "Einen HIV-Test machen",
+          "en": "Find an HIV Test",
+          "es": "H\u00e1zte la prueba del VIH",
+          "fr": "Faire un test de d\u00e9pistage du VIH",
+          "hi": "\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902",
+          "id": "Lakukan Tes HIV",
+          "it": "Sottoponiti a un test HIV",
+          "ja": "HIV\u691c\u67fb\u3092\u53d7\u3051\u308b",
+          "ko": "HIV \uac80\uc0ac \ubc1b\uae30",
+          "ms": "Dapatkan Ujian HIV",
+          "pt": "Fa\u00e7a um teste de HIV",
+          "ru": "\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427",
+          "sw": "Fanya Kipimo cha VVU",
+          "te": "\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f",
+          "th": "\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35",
+          "tl": "Magpa-HIV Test",
+          "vi": "X\u00e9t nghi\u1ec7m HIV",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://quickres.org/2642037",
+          "es-419": "H\u00e1gase una prueba de VIH",
+          "zh-chs": "\u505a\u4e00\u4e2a HIV \u68c0\u6d4b",
+          "zh-cht": "\u9032\u884c HIV \u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629\",\n  \"bn\": \"\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8\",\n  \"de\": \"Einen HIV-Test machen\",\n  \"en\": \"Find an HIV Test\",\n  \"es\": \"H\u00e1zte la prueba del VIH\",\n  \"fr\": \"Faire un test de d\u00e9pistage du VIH\",\n  \"hi\": \"\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902\",\n  \"id\": \"Lakukan Tes HIV\",\n  \"it\": \"Sottoponiti a un test HIV\",\n  \"ja\": \"HIV\u691c\u67fb\u3092\u53d7\u3051\u308b\",\n  \"ko\": \"HIV \uac80\uc0ac \ubc1b\uae30\",\n  \"ms\": \"Dapatkan Ujian HIV\",\n  \"pt\": \"Fa\u00e7a um teste de HIV\",\n  \"ru\": \"\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427\",\n  \"sw\": \"Fanya Kipimo cha VVU\",\n  \"te\": \"\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f\",\n  \"th\": \"\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35\",\n  \"tl\": \"Magpa-HIV Test\",\n  \"vi\": \"X\u00e9t nghi\u1ec7m HIV\",\n  \"fil\": \"Libreng Pagsusuri ng HIV sa Tahanan\",\n  \"url\": \"https://quickres.org/2642037\",\n  \"es-419\": \"H\u00e1gase una prueba de VIH\",\n  \"zh-chs\": \"\u505a\u4e00\u4e2a HIV \u68c0\u6d4b\",\n  \"zh-cht\": \"\u9032\u884c HIV \u6aa2\u6e2c\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y8zMjgmIFYJlu2ZLNUitZ",
+        "baseID": "4y8zMjgmIFYJlu2ZLNUitZ",
+        "name": "Kenya Take Me Home HIV (takemehome-kenya)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "KE"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629",
+          "bn": "\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8",
+          "de": "Einen HIV-Test machen",
+          "en": "Do I have rights?",
+          "es": "H\u00e1zte la prueba del VIH",
+          "fr": "Faire un test de d\u00e9pistage du VIH",
+          "hi": "\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902",
+          "id": "Lakukan Tes HIV",
+          "it": "Sottoponiti a un test HIV",
+          "ja": "HIV\u691c\u67fb\u3092\u53d7\u3051\u308b",
+          "ko": "HIV \uac80\uc0ac \ubc1b\uae30",
+          "ms": "Dapatkan Ujian HIV",
+          "pt": "Fa\u00e7a um teste de HIV",
+          "ru": "\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427",
+          "sw": "Fanya Kipimo cha VVU",
+          "te": "\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f",
+          "th": "\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35",
+          "tl": "Magpa-HIV Test",
+          "vi": "X\u00e9t nghi\u1ec7m HIV",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://galck.org/know-your-rights/",
+          "es-419": "H\u00e1gase una prueba de VIH",
+          "zh-chs": "\u505a\u4e00\u4e2a HIV \u68c0\u6d4b",
+          "zh-cht": "\u9032\u884c HIV \u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629\",\n  \"bn\": \"\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8\",\n  \"de\": \"Einen HIV-Test machen\",\n  \"en\": \"Do I have rights?\",\n  \"es\": \"H\u00e1zte la prueba del VIH\",\n  \"fr\": \"Faire un test de d\u00e9pistage du VIH\",\n  \"hi\": \"\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902\",\n  \"id\": \"Lakukan Tes HIV\",\n  \"it\": \"Sottoponiti a un test HIV\",\n  \"ja\": \"HIV\u691c\u67fb\u3092\u53d7\u3051\u308b\",\n  \"ko\": \"HIV \uac80\uc0ac \ubc1b\uae30\",\n  \"ms\": \"Dapatkan Ujian HIV\",\n  \"pt\": \"Fa\u00e7a um teste de HIV\",\n  \"ru\": \"\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427\",\n  \"sw\": \"Fanya Kipimo cha VVU\",\n  \"te\": \"\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f\",\n  \"th\": \"\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35\",\n  \"tl\": \"Magpa-HIV Test\",\n  \"vi\": \"X\u00e9t nghi\u1ec7m HIV\",\n  \"fil\": \"Libreng Pagsusuri ng HIV sa Tahanan\",\n  \"url\": \"https://galck.org/know-your-rights/\",\n  \"es-419\": \"H\u00e1gase una prueba de VIH\",\n  \"zh-chs\": \"\u505a\u4e00\u4e2a HIV \u68c0\u6d4b\",\n  \"zh-cht\": \"\u9032\u884c HIV \u6aa2\u6e2c\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y8zMkVpaY8dETAVmVPVN1",
+        "baseID": "4y8zMkVpaY8dETAVmVPVN1",
+        "name": "Bulgaria Take Me Home HIV (takemehome-bulgaria)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "BG"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629",
+          "bn": "\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8",
+          "de": "Einen HIV-Test machen",
+          "en": "Find an HIV Test",
+          "es": "H\u00e1zte la prueba del VIH",
+          "fr": "Faire un test de d\u00e9pistage du VIH",
+          "hi": "\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902",
+          "id": "Lakukan Tes HIV",
+          "it": "Sottoponiti a un test HIV",
+          "ja": "HIV\u691c\u67fb\u3092\u53d7\u3051\u308b",
+          "ko": "HIV \uac80\uc0ac \ubc1b\uae30",
+          "ms": "Dapatkan Ujian HIV",
+          "pt": "Fa\u00e7a um teste de HIV",
+          "ru": "\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427",
+          "sw": "Fanya Kipimo cha VVU",
+          "te": "\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f",
+          "th": "\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35",
+          "tl": "Magpa-HIV Test",
+          "vi": "X\u00e9t nghi\u1ec7m HIV",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://ivor.bg/labs/?utm_source=Grindr&utm_medium=SD&utm_campaign=Link",
+          "es-419": "H\u00e1gase una prueba de VIH",
+          "zh-chs": "\u505a\u4e00\u4e2a HIV \u68c0\u6d4b",
+          "zh-cht": "\u9032\u884c HIV \u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629\",\n  \"bn\": \"\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8\",\n  \"de\": \"Einen HIV-Test machen\",\n  \"en\": \"Find an HIV Test\",\n  \"es\": \"H\u00e1zte la prueba del VIH\",\n  \"fr\": \"Faire un test de d\u00e9pistage du VIH\",\n  \"hi\": \"\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902\",\n  \"id\": \"Lakukan Tes HIV\",\n  \"it\": \"Sottoponiti a un test HIV\",\n  \"ja\": \"HIV\u691c\u67fb\u3092\u53d7\u3051\u308b\",\n  \"ko\": \"HIV \uac80\uc0ac \ubc1b\uae30\",\n  \"ms\": \"Dapatkan Ujian HIV\",\n  \"pt\": \"Fa\u00e7a um teste de HIV\",\n  \"ru\": \"\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427\",\n  \"sw\": \"Fanya Kipimo cha VVU\",\n  \"te\": \"\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f\",\n  \"th\": \"\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35\",\n  \"tl\": \"Magpa-HIV Test\",\n  \"vi\": \"X\u00e9t nghi\u1ec7m HIV\",\n  \"fil\": \"Libreng Pagsusuri ng HIV sa Tahanan\",\n  \"url\": \"https://ivor.bg/labs/?utm_source=Grindr&utm_medium=SD&utm_campaign=Link\",\n  \"es-419\": \"H\u00e1gase una prueba de VIH\",\n  \"zh-chs\": \"\u505a\u4e00\u4e2a HIV \u68c0\u6d4b\",\n  \"zh-cht\": \"\u9032\u884c HIV \u6aa2\u6e2c\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y8E6myy4ArWk0t88LI8cz",
+        "baseID": "4y8E6myy4ArWk0t88LI8cz",
+        "name": "Brazil Take Me Home HIV (takemehome-brazil)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "BR"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629",
+          "bn": "\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8",
+          "de": "Einen HIV-Test machen",
+          "en": "Where to find PrEP?",
+          "es": "H\u00e1zte la prueba del VIH",
+          "fr": "Faire un test de d\u00e9pistage du VIH",
+          "hi": "\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902",
+          "id": "Lakukan Tes HIV",
+          "it": "Sottoponiti a un test HIV",
+          "ja": "HIV\u691c\u67fb\u3092\u53d7\u3051\u308b",
+          "ko": "HIV \uac80\uc0ac \ubc1b\uae30",
+          "ms": "Dapatkan Ujian HIV",
+          "pt": "Fa\u00e7a um teste de HIV",
+          "ru": "\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427",
+          "sw": "Fanya Kipimo cha VVU",
+          "te": "\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f",
+          "th": "\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35",
+          "tl": "Magpa-HIV Test",
+          "vi": "X\u00e9t nghi\u1ec7m HIV",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiMmIwNTg5YTAtMWEyMi00YzMzLWE0YmQtMmUwNzQxZjkzYTc5IiwidCI6IjZjMzhiMTU4LWI4OGItNGZjNS04NDkxLTFjNWI0NmI3NDJhYyJ9",
+          "es-419": "H\u00e1gase una prueba de VIH",
+          "zh-chs": "\u505a\u4e00\u4e2a HIV \u68c0\u6d4b",
+          "zh-cht": "\u9032\u884c HIV \u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629\",\n  \"bn\": \"\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8\",\n  \"de\": \"Einen HIV-Test machen\",\n  \"en\": \"Where to find PrEP?\",\n  \"es\": \"H\u00e1zte la prueba del VIH\",\n  \"fr\": \"Faire un test de d\u00e9pistage du VIH\",\n  \"hi\": \"\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902\",\n  \"id\": \"Lakukan Tes HIV\",\n  \"it\": \"Sottoponiti a un test HIV\",\n  \"ja\": \"HIV\u691c\u67fb\u3092\u53d7\u3051\u308b\",\n  \"ko\": \"HIV \uac80\uc0ac \ubc1b\uae30\",\n  \"ms\": \"Dapatkan Ujian HIV\",\n  \"pt\": \"Fa\u00e7a um teste de HIV\",\n  \"ru\": \"\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427\",\n  \"sw\": \"Fanya Kipimo cha VVU\",\n  \"te\": \"\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f\",\n  \"th\": \"\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35\",\n  \"tl\": \"Magpa-HIV Test\",\n  \"vi\": \"X\u00e9t nghi\u1ec7m HIV\",\n  \"fil\": \"Libreng Pagsusuri ng HIV sa Tahanan\",\n  \"url\": \"https://app.powerbi.com/view?r=eyJrIjoiMmIwNTg5YTAtMWEyMi00YzMzLWE0YmQtMmUwNzQxZjkzYTc5IiwidCI6IjZjMzhiMTU4LWI4OGItNGZjNS04NDkxLTFjNWI0NmI3NDJhYyJ9\",\n  \"es-419\": \"H\u00e1gase una prueba de VIH\",\n  \"zh-chs\": \"\u505a\u4e00\u4e2a HIV \u68c0\u6d4b\",\n  \"zh-cht\": \"\u9032\u884c HIV \u6aa2\u6e2c\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y8IqpQJquV9iwTgvJvXV9",
+        "baseID": "4y8IqpQJquV9iwTgvJvXV9",
+        "name": "(mpox-resources)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "BR",
+              "IN",
+              "GB",
+              "ES",
+              "PH",
+              "FR",
+              "IT",
+              "CA",
+              "DE",
+              "MY",
+              "PL",
+              "TW",
+              "NL",
+              "PT",
+              "ZA",
+              "IL",
+              "DZ",
+              "EG",
+              "VN",
+              "BE",
+              "TH",
+              "SG",
+              "IQ",
+              "MA",
+              "ID",
+              "GR",
+              "CH",
+              "HK",
+              "SE",
+              "RO",
+              "CZ",
+              "NG",
+              "AT",
+              "JP",
+              "RS",
+              "DK",
+              "PR",
+              "KW",
+              "BG",
+              "NO",
+              "JO",
+              "FI",
+              "HU",
+              "LK",
+              "HR",
+              "SK",
+              "KR",
+              "KE",
+              "TN",
+              "KH",
+              "LB",
+              "BD",
+              "BH",
+              "AE",
+              "PK",
+              "CY",
+              "RU",
+              "CN",
+              "SI",
+              "BA",
+              "OM",
+              "LT",
+              "TT",
+              "CI",
+              "QA",
+              "MT",
+              "MK",
+              "TR",
+              "NP",
+              "JM",
+              "AL",
+              "MU",
+              "MM",
+              "GH",
+              "SN",
+              "LU",
+              "AM",
+              "CM",
+              "LV",
+              "SA",
+              "TZ",
+              "RE",
+              "PS",
+              "EE",
+              "ET",
+              "ME",
+              "LY",
+              "FJ",
+              "IS",
+              "XK",
+              "BN",
+              "BS",
+              "UA",
+              "AZ",
+              "UG",
+              "GP",
+              "GY",
+              "MN",
+              "NA",
+              "AW",
+              "ZW",
+              "MO",
+              "MD",
+              "BB",
+              "LA",
+              "MQ",
+              "SR",
+              "GU",
+              "BY",
+              "CW",
+              "AD",
+              "MV",
+              "KZ",
+              "SD",
+              "HT",
+              "ZM",
+              "PF",
+              "GF",
+              "NC",
+              "BW",
+              "AO",
+              "JE",
+              "ML",
+              "TG",
+              "KY",
+              "IR",
+              "BF",
+              "BJ",
+              "CD",
+              "SC",
+              "MZ",
+              "MG",
+              "UZ",
+              "VI",
+              "IM",
+              "RW",
+              "BM",
+              "GI",
+              "MR",
+              "LC",
+              "KG",
+              "GN",
+              "GD",
+              "SO",
+              "BT",
+              "SZ",
+              "MF",
+              "GA",
+              "CV",
+              "SX",
+              "PG",
+              "BQ",
+              "CG",
+              "KN",
+              "GM",
+              "GG",
+              "TC",
+              "AG",
+              "VC",
+              "MW",
+              "MS",
+              "VG",
+              "YT",
+              "GL",
+              "MP",
+              "DJ",
+              "NE",
+              "SL",
+              "FO",
+              "TD",
+              "SM",
+              "MC",
+              "DM",
+              "BL",
+              "LS",
+              "TL",
+              "WS",
+              "LI",
+              "SY",
+              "AI",
+              "BI",
+              "CK",
+              "AX",
+              "GQ",
+              "LR",
+              "VU",
+              "SS",
+              "AF",
+              "SB",
+              "AS",
+              "PW",
+              "FK",
+              "TJ",
+              "YE",
+              "TO",
+              "GW",
+              "IO",
+              "KM",
+              "CF",
+              "ST",
+              "NR",
+              "SH",
+              "MH",
+              "FM",
+              "NF",
+              "VA",
+              "WF",
+              "TM",
+              "KP",
+              "NU",
+              "PM",
+              "KI",
+              "ER",
+              "TV",
+              "EH",
+              "TK",
+              "CX"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0645\u0648\u0627\u0631\u062f \u062c\u062f\u0631\u064a \u0627\u0644\u0642\u0631\u0648\u062f",
+          "bn": "\u09ae\u09be\u0999\u09cd\u0995\u09bf\u09aa\u0995\u09cd\u09b8 \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995\u09bf\u09a4 \u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8",
+          "de": "Mpox-Ressourcen",
+          "en": "Mpox Resources",
+          "es": "Recursos sobre la viruela s\u00edmica",
+          "fr": "Ressources sur la variole du singe",
+          "hi": "\u092e\u0902\u0915\u0940\u092a\u0949\u0915\u094d\u0938 \u0938\u0902\u0938\u093e\u0927\u0928",
+          "id": "Sumber daya Mpox",
+          "it": "Risorse MPX",
+          "ja": "\u30b5\u30eb\u75d8\u306b\u95a2\u3059\u308b\u30ea\u30bd\u30fc\u30b9",
+          "ko": "\uc5e0\ud3ed\uc2a4 \ub9ac\uc18c\uc2a4",
+          "ms": "Sumber Cacar Monyet",
+          "pt": "Recursos para a var\u00edola dos macacos",
+          "ru": "\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b \u043f\u043e \u043e\u0431\u0435\u0437\u044c\u044f\u043d\u044c\u0435\u0439 \u043e\u0441\u043f\u0435",
+          "sw": "Rasilimali za Monkeypox",
+          "te": "\u0c2e\u0c02\u0c15\u0c40 \u0c2a\u0c3e\u0c15\u0c4d\u0c38\u0c4d \u0c35\u0c28\u0c30\u0c41\u0c32\u0c41",
+          "th": "\u0e17\u0e23\u0e31\u0e1e\u0e22\u0e32\u0e01\u0e23 Mpox",
+          "tl": "Resources ng Mpox",
+          "vi": "Ngu\u1ed3n l\u1ef1c v\u1ec1 \u0111\u1eadu m\u00f9a kh\u1ec9",
+          "fil": "Mga resource sa Mpox",
+          "url": "https://help.grindr.com/hc/en-us/articles/8216530716307",
+          "es-419": "Recursos sobre la viruela s\u00edmica",
+          "zh-chs": "\u7334\u75d8\u8d44\u6e90",
+          "zh-cht": "\u7334\u75d8\u8cc7\u6e90"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"\u0645\u0648\u0627\u0631\u062f \u062c\u062f\u0631\u064a \u0627\u0644\u0642\u0631\u0648\u062f\",\n  \"bn\": \"\u09ae\u09be\u0999\u09cd\u0995\u09bf\u09aa\u0995\u09cd\u09b8 \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995\u09bf\u09a4 \u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8\",\n  \"de\": \"Mpox-Ressourcen\",\n  \"en\": \"Mpox Resources\",\n  \"es\": \"Recursos sobre la viruela s\u00edmica\",\n  \"fr\": \"Ressources sur la variole du singe\",\n  \"hi\": \"\u092e\u0902\u0915\u0940\u092a\u0949\u0915\u094d\u0938 \u0938\u0902\u0938\u093e\u0927\u0928\",\n  \"id\": \"Sumber daya Mpox\",\n  \"it\": \"Risorse MPX\",\n  \"ja\": \"\u30b5\u30eb\u75d8\u306b\u95a2\u3059\u308b\u30ea\u30bd\u30fc\u30b9\",\n  \"ko\": \"\uc5e0\ud3ed\uc2a4 \ub9ac\uc18c\uc2a4\",\n  \"ms\": \"Sumber Cacar Monyet\",\n  \"pt\": \"Recursos para a var\u00edola dos macacos\",\n  \"ru\": \"\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b \u043f\u043e \u043e\u0431\u0435\u0437\u044c\u044f\u043d\u044c\u0435\u0439 \u043e\u0441\u043f\u0435\",\n  \"sw\": \"Rasilimali za Monkeypox\",\n  \"te\": \"\u0c2e\u0c02\u0c15\u0c40 \u0c2a\u0c3e\u0c15\u0c4d\u0c38\u0c4d \u0c35\u0c28\u0c30\u0c41\u0c32\u0c41\",\n  \"th\": \"\u0e17\u0e23\u0e31\u0e1e\u0e22\u0e32\u0e01\u0e23 Mpox\",\n  \"tl\": \"Resources ng Mpox\",\n  \"vi\": \"Ngu\u1ed3n l\u1ef1c v\u1ec1 \u0111\u1eadu m\u00f9a kh\u1ec9\",\n  \"fil\": \"Mga resource sa Mpox\",\n  \"url\": \"https://help.grindr.com/hc/en-us/articles/8216530716307\",\n  \"es-419\": \"Recursos sobre la viruela s\u00edmica\",\n  \"zh-chs\": \"\u7334\u75d8\u8d44\u6e90\",\n  \"zh-cht\": \"\u7334\u75d8\u8cc7\u6e90\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y8MKt8UMpomh3joSHjNDJ",
+        "baseID": "4y8MKt8UMpomh3joSHjNDJ",
+        "name": "Australia (australia)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "AU"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a",
+          "bn": "\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be",
+          "de": "Gratis HIV Test f\u00fcr Zuhause",
+          "en": "Free HIV Self-Test",
+          "es": "Auto Prueba de VIH",
+          "fr": "Test HIV gratuit chez soi",
+          "hi": "\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a",
+          "id": "Tes HIV Mandiri Gratis",
+          "it": "Autotest HIV gratuito",
+          "ja": "\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb",
+          "ko": "\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8",
+          "ms": "Ujian HIV Percuma Di Rumah",
+          "pt": "Autoteste para HIV Gr\u00e1tis",
+          "ru": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430",
+          "sw": "Kipimo cha bure cha nyumbani cha HIV",
+          "te": "\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37",
+          "th": "\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35",
+          "tl": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "vi": "X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://self.hivtest.au/?utm_source=gr-side&utm_campaign=HSTGRSD&utm_id=gr-side",
+          "es-419": "Auto Prueba de VIH",
+          "zh-chs": "\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5",
+          "zh-cht": "\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a\",\n  \"bn\": \"\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be\",\n  \"de\": \"Gratis HIV Test f\u00fcr Zuhause\",\n  \"en\": \"Free HIV Self-Test\",\n  \"es\": \"Auto Prueba de VIH\",\n  \"fr\": \"Test HIV gratuit chez soi\",\n  \"hi\": \"\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a\",\n  \"id\": \"Tes HIV Mandiri Gratis\",\n  \"it\": \"Autotest HIV gratuito\",\n  \"ja\": \"\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb\",\n  \"ko\": \"\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8\",\n  \"ms\": \"Ujian HIV Percuma Di Rumah\",\n  \"pt\": \"Autoteste para HIV Gr\u00e1tis\",\n  \"ru\": \"\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430\",\n  \"sw\": \"Kipimo cha bure cha nyumbani cha HIV\",\n  \"te\": \"\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37\",\n  \"th\": \"\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35\",\n  \"tl\": \"Libreng Pagsusuri ng HIV sa Tahanan\",\n  \"vi\": \"X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed\",\n  \"fil\": \"Libreng Pagsusuri ng HIV sa Tahanan\",\n  \"url\": \"https://self.hivtest.au/?utm_source=gr-side&utm_campaign=HSTGRSD&utm_id=gr-side\",\n  \"es-419\": \"Auto Prueba de VIH\",\n  \"zh-chs\": \"\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5\",\n  \"zh-cht\": \"\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y8MKuNXeHxQAsRktPfqWL",
+        "baseID": "4y8MKuNXeHxQAsRktPfqWL",
+        "name": "PAHO - English (paho-english)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "AG",
+              "BS",
+              "BB",
+              "DM",
+              "GD",
+              "GY",
+              "HT",
+              "JM",
+              "KN",
+              "LC",
+              "VC",
+              "SR",
+              "TT"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "Better with PrEP",
+          "bn": "Better with PrEP",
+          "de": "Better with PrEP",
+          "en": "Better with PrEP",
+          "es": "Mejor con PrEP",
+          "fr": "Better with PrEP",
+          "hi": "Better with PrEP",
+          "id": "Better with PrEP",
+          "it": "Better with PrEP",
+          "ja": "Better with PrEP",
+          "ko": "Better with PrEP",
+          "ms": "Better with PrEP",
+          "pt": "Better with PrEP",
+          "ru": "Better with PrEP",
+          "sw": "Better with PrEP",
+          "te": "Better with PrEP",
+          "th": "Better with PrEP",
+          "tl": "Better with PrEP",
+          "vi": "Better with PrEP",
+          "fil": "Better with PrEP",
+          "url": "https://www.paho.org/en/better-prep",
+          "es-419": "Better with PrEP",
+          "zh-chs": "Better with PrEP",
+          "zh-cht": "Better with PrEP"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"Better with PrEP\",\n  \"bn\": \"Better with PrEP\",\n  \"de\": \"Better with PrEP\",\n  \"en\": \"Better with PrEP\",\n  \"es\": \"Mejor con PrEP\",\n  \"fr\": \"Better with PrEP\",\n  \"hi\": \"Better with PrEP\",\n  \"id\": \"Better with PrEP\",\n  \"it\": \"Better with PrEP\",\n  \"ja\": \"Better with PrEP\",\n  \"ko\": \"Better with PrEP\",\n  \"ms\": \"Better with PrEP\",\n  \"pt\": \"Better with PrEP\",\n  \"ru\": \"Better with PrEP\",\n  \"sw\": \"Better with PrEP\",\n  \"te\": \"Better with PrEP\",\n  \"th\": \"Better with PrEP\",\n  \"tl\": \"Better with PrEP\",\n  \"vi\": \"Better with PrEP\",\n  \"fil\": \"Better with PrEP\",\n  \"url\": \"https://www.paho.org/en/better-prep\",\n  \"es-419\": \"Better with PrEP\",\n  \"zh-chs\": \"Better with PrEP\",\n  \"zh-cht\": \"Better with PrEP\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y8R4wr68jRzfzJxfF7Dmj",
+        "baseID": "4y8R4wr68jRzfzJxfF7Dmj",
+        "name": "PAHO - Spanish (paho-spanish)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "VE",
+              "UY",
+              "PE",
+              "PY",
+              "PA",
+              "NI",
+              "MX",
+              "HN",
+              "GT",
+              "SV",
+              "EC",
+              "DO",
+              "CU",
+              "CR",
+              "CO",
+              "CL",
+              "BO",
+              "AR"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "Mejor con PrEP",
+          "bn": "Mejor con PrEP",
+          "de": "Mejor con PrEP",
+          "en": "Better with PrEP",
+          "es": "Mejor con PrEP",
+          "fr": "Mejor con PrEP",
+          "hi": "Mejor con PrEP",
+          "id": "Mejor con PrEP",
+          "it": "Mejor con PrEP",
+          "ja": "Mejor con PrEP",
+          "ko": "Mejor con PrEP",
+          "ms": "Mejor con PrEP",
+          "pt": "Mejor con PrEP",
+          "ru": "Mejor con PrEP",
+          "sw": "Mejor con PrEP",
+          "te": "Mejor con PrEP",
+          "th": "Mejor con PrEP",
+          "tl": "Mejor con PrEP",
+          "vi": "Mejor con PrEP",
+          "fil": "Mejor con PrEP",
+          "url": "https://www.paho.org/es/mejor-con-prep",
+          "es-419": "Mejor con PrEP",
+          "zh-chs": "Mejor con PrEP",
+          "zh-cht": "Mejor con PrEP"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"Mejor con PrEP\",\n  \"bn\": \"Mejor con PrEP\",\n  \"de\": \"Mejor con PrEP\",\n  \"en\": \"Better with PrEP\",\n  \"es\": \"Mejor con PrEP\",\n  \"fr\": \"Mejor con PrEP\",\n  \"hi\": \"Mejor con PrEP\",\n  \"id\": \"Mejor con PrEP\",\n  \"it\": \"Mejor con PrEP\",\n  \"ja\": \"Mejor con PrEP\",\n  \"ko\": \"Mejor con PrEP\",\n  \"ms\": \"Mejor con PrEP\",\n  \"pt\": \"Mejor con PrEP\",\n  \"ru\": \"Mejor con PrEP\",\n  \"sw\": \"Mejor con PrEP\",\n  \"te\": \"Mejor con PrEP\",\n  \"th\": \"Mejor con PrEP\",\n  \"tl\": \"Mejor con PrEP\",\n  \"vi\": \"Mejor con PrEP\",\n  \"fil\": \"Mejor con PrEP\",\n  \"url\": \"https://www.paho.org/es/mejor-con-prep\",\n  \"es-419\": \"Mejor con PrEP\",\n  \"zh-chs\": \"Mejor con PrEP\",\n  \"zh-cht\": \"Mejor con PrEP\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "4y8VozJhuekMe69FCCVt4T",
+        "baseID": "4y8VozJhuekMe69FCCVt4T",
+        "name": "Latin America (mpox-resources-latam)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "MX",
+              "CO",
+              "AR",
+              "PE",
+              "VE",
+              "CL",
+              "EC",
+              "GT",
+              "CU",
+              "BO",
+              "DO",
+              "HN",
+              "PY",
+              "SV",
+              "NI",
+              "CR",
+              "PA",
+              "UY",
+              "BZ"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0645\u0648\u0627\u0631\u062f \u062c\u062f\u0631\u064a \u0627\u0644\u0642\u0631\u0648\u062f",
+          "bn": "\u09ae\u09be\u0999\u09cd\u0995\u09bf\u09aa\u0995\u09cd\u09b8 \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995\u09bf\u09a4 \u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8",
+          "de": "Mpox-Ressourcen",
+          "en": "Mpox Resources",
+          "es": "Sobre la Viruela S\u00edmica",
+          "fr": "Ressources sur la variole du singe",
+          "hi": "\u092e\u0902\u0915\u0940\u092a\u0949\u0915\u094d\u0938 \u0938\u0902\u0938\u093e\u0927\u0928",
+          "id": "Sumber daya Mpox",
+          "it": "Risorse MPX",
+          "ja": "\u30b5\u30eb\u75d8\u306b\u95a2\u3059\u308b\u30ea\u30bd\u30fc\u30b9",
+          "ko": "\uc5e0\ud3ed\uc2a4 \ub9ac\uc18c\uc2a4",
+          "ms": "Sumber Cacar Monyet",
+          "pt": "Recursos para a var\u00edola dos macacos",
+          "ru": "\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b \u043f\u043e \u043e\u0431\u0435\u0437\u044c\u044f\u043d\u044c\u0435\u0439 \u043e\u0441\u043f\u0435",
+          "sw": "Rasilimali za Monkeypox",
+          "te": "\u0c2e\u0c02\u0c15\u0c40 \u0c2a\u0c3e\u0c15\u0c4d\u0c38\u0c4d \u0c35\u0c28\u0c30\u0c41\u0c32\u0c41",
+          "th": "\u0e17\u0e23\u0e31\u0e1e\u0e22\u0e32\u0e01\u0e23 Mpox",
+          "tl": "Resources ng Mpox",
+          "vi": "Ngu\u1ed3n l\u1ef1c v\u1ec1 \u0111\u1eadu m\u00f9a kh\u1ec9",
+          "fil": "Mga resource sa Mpox",
+          "url": "https://www.paho.org/es/brote-por-enfermedad-viruela-simica-2022/viruela-simica-consejos-recursos-para-poblacion",
+          "es-419": "Sobre la Viruela S\u00edmica",
+          "zh-chs": "\u7334\u75d8\u8d44\u6e90",
+          "zh-cht": "\u7334\u75d8\u8cc7\u6e90"
+        },
+        "returnValueJson5": "{\n  \"ar\": \"\u0645\u0648\u0627\u0631\u062f \u062c\u062f\u0631\u064a \u0627\u0644\u0642\u0631\u0648\u062f\",\n  \"bn\": \"\u09ae\u09be\u0999\u09cd\u0995\u09bf\u09aa\u0995\u09cd\u09b8 \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995\u09bf\u09a4 \u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8\",\n  \"de\": \"Mpox-Ressourcen\",\n  \"en\": \"Mpox Resources\",\n  \"es\": \"Sobre la Viruela S\u00edmica\",\n  \"fr\": \"Ressources sur la variole du singe\",\n  \"hi\": \"\u092e\u0902\u0915\u0940\u092a\u0949\u0915\u094d\u0938 \u0938\u0902\u0938\u093e\u0927\u0928\",\n  \"id\": \"Sumber daya Mpox\",\n  \"it\": \"Risorse MPX\",\n  \"ja\": \"\u30b5\u30eb\u75d8\u306b\u95a2\u3059\u308b\u30ea\u30bd\u30fc\u30b9\",\n  \"ko\": \"\uc5e0\ud3ed\uc2a4 \ub9ac\uc18c\uc2a4\",\n  \"ms\": \"Sumber Cacar Monyet\",\n  \"pt\": \"Recursos para a var\u00edola dos macacos\",\n  \"ru\": \"\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b \u043f\u043e \u043e\u0431\u0435\u0437\u044c\u044f\u043d\u044c\u0435\u0439 \u043e\u0441\u043f\u0435\",\n  \"sw\": \"Rasilimali za Monkeypox\",\n  \"te\": \"\u0c2e\u0c02\u0c15\u0c40 \u0c2a\u0c3e\u0c15\u0c4d\u0c38\u0c4d \u0c35\u0c28\u0c30\u0c41\u0c32\u0c41\",\n  \"th\": \"\u0e17\u0e23\u0e31\u0e1e\u0e22\u0e32\u0e01\u0e23 Mpox\",\n  \"tl\": \"Resources ng Mpox\",\n  \"vi\": \"Ngu\u1ed3n l\u1ef1c v\u1ec1 \u0111\u1eadu m\u00f9a kh\u1ec9\",\n  \"fil\": \"Mga resource sa Mpox\",\n  \"url\": \"https://www.paho.org/es/brote-por-enfermedad-viruela-simica-2022/viruela-simica-consejos-recursos-para-poblacion\",\n  \"es-419\": \"Sobre la Viruela S\u00edmica\",\n  \"zh-chs\": \"\u7334\u75d8\u8d44\u6e90\",\n  \"zh-cht\": \"\u7334\u75d8\u8cc7\u6e90\",\n}\n",
+        "environments": null
+      }
+    ],
+    "defaultValue": {
+      "url": "https://help.grindr.com/hc/en-us/articles/8216530716307",
+      "enabled": true,
+      "linkCopy": "Mpox Resources"
+    },
+    "defaultValueJson5": "{\n  \"url\": \"https://help.grindr.com/hc/en-us/articles/8216530716307\",\n  \"enabled\": true,\n  \"linkCopy\": \"Mpox Resources\",\n}\n",
+    "version": 6
+  },
+  {
+    "id": "andres-config-spl",
+    "name": "andres-config-spl",
+    "description": "",
+    "idType": "profileId",
+    "lastModifierID": "4QiHFqH4qVMdS2dVYVr26L",
+    "lastModifiedTime": 1742320074306,
+    "lastModifierName": "Andres Atehortua",
+    "lastModifierEmail": "andres.atehortua@team.grindr.com",
+    "creatorID": "4QiHFqH4qVMdS2dVYVr26L",
+    "createdTime": 1742320073320,
+    "creatorName": "Andres Atehortua",
+    "creatorEmail": "andres.atehortua@team.grindr.com",
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [],
+    "team": null,
+    "owner": {
+      "ownerID": "4QiHFqH4qVMdS2dVYVr26L",
+      "ownerType": "USER",
+      "ownerName": "Andres Atehortua",
+      "ownerEmail": "andres.atehortua@team.grindr.com"
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "VEwAyZobj8DbuuzlmliNQ",
+        "baseID": "VEwAyZobj8DbuuzlmliNQ",
+        "name": "United States (take-me-home)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "US"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a",
+          "bn": "\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be",
+          "de": "Gratis HIV Test f\u00fcr Zuhause",
+          "en": "Free HIV Home Test",
+          "es": "Auto Prueba de VIH",
+          "fr": "Test HIV gratuit chez soi",
+          "hi": "\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a",
+          "id": "Tes HIV Mandiri Gratis",
+          "it": "Autotest HIV gratuito",
+          "ja": "\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb",
+          "ko": "\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8",
+          "ms": "Ujian HIV Percuma Di Rumah",
+          "pt": "Autoteste para HIV Gr\u00e1tis",
+          "ru": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430",
+          "sw": "Kipimo cha bure cha nyumbani cha HIV",
+          "te": "\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37",
+          "th": "\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35",
+          "tl": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "vi": "X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://together.takemehome.org/?utm_source=grindr1",
+          "es-419": "Auto Prueba de VIH",
+          "zh-chs": "\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5",
+          "zh-cht": "\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\"ar\":\"\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a\",\"bn\":\"\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be\",\"de\":\"Gratis HIV Test f\u00fcr Zuhause\",\"en\":\"Free HIV Home Test\",\"es\":\"Auto Prueba de VIH\",\"fr\":\"Test HIV gratuit chez soi\",\"hi\":\"\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a\",\"id\":\"Tes HIV Mandiri Gratis\",\"it\":\"Autotest HIV gratuito\",\"ja\":\"\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb\",\"ko\":\"\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8\",\"ms\":\"Ujian HIV Percuma Di Rumah\",\"pt\":\"Autoteste para HIV Gr\u00e1tis\",\"ru\":\"\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430\",\"sw\":\"Kipimo cha bure cha nyumbani cha HIV\",\"te\":\"\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37\",\"th\":\"\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35\",\"tl\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"vi\":\"X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed\",\"fil\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"url\":\"https://together.takemehome.org/?utm_source=grindr1\",\"es-419\":\"Auto Prueba de VIH\",\"zh-chs\":\"\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5\",\"zh-cht\":\"\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c\"}",
+        "environments": null
+      },
+      {
+        "id": "VEwAAEqDBi7uU2uWugW6S",
+        "baseID": "VEwAAEqDBi7uU2uWugW6S",
+        "name": "Ireland  - HIV (take-me-home-ireland)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "IE"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a",
+          "bn": "\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be",
+          "de": "Gratis HIV Test f\u00fcr Zuhause",
+          "en": "Free HIV Home Test",
+          "es": "Auto Prueba de VIH",
+          "fr": "Test HIV gratuit chez soi",
+          "hi": "\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a",
+          "id": "Tes HIV Mandiri Gratis",
+          "it": "Autotest HIV gratuito",
+          "ja": "\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb",
+          "ko": "\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8",
+          "ms": "Ujian HIV Percuma Di Rumah",
+          "pt": "Autoteste para HIV Gr\u00e1tis",
+          "ru": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430",
+          "sw": "Kipimo cha bure cha nyumbani cha HIV",
+          "te": "\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37",
+          "th": "\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35",
+          "tl": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "vi": "X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://mpower.hivireland.ie/self-test-order/?utm_source=grindr&utm_medium=app&utm_campaign=button&utm_term=direct_click",
+          "es-419": "Auto Prueba de VIH",
+          "zh-chs": "\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5",
+          "zh-cht": "\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\"ar\":\"\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a\",\"bn\":\"\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be\",\"de\":\"Gratis HIV Test f\u00fcr Zuhause\",\"en\":\"Free HIV Home Test\",\"es\":\"Auto Prueba de VIH\",\"fr\":\"Test HIV gratuit chez soi\",\"hi\":\"\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a\",\"id\":\"Tes HIV Mandiri Gratis\",\"it\":\"Autotest HIV gratuito\",\"ja\":\"\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb\",\"ko\":\"\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8\",\"ms\":\"Ujian HIV Percuma Di Rumah\",\"pt\":\"Autoteste para HIV Gr\u00e1tis\",\"ru\":\"\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430\",\"sw\":\"Kipimo cha bure cha nyumbani cha HIV\",\"te\":\"\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37\",\"th\":\"\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35\",\"tl\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"vi\":\"X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed\",\"fil\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"url\":\"https://mpower.hivireland.ie/self-test-order/?utm_source=grindr&utm_medium=app&utm_campaign=button&utm_term=direct_click\",\"es-419\":\"Auto Prueba de VIH\",\"zh-chs\":\"\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5\",\"zh-cht\":\"\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c\"}",
+        "environments": null
+      },
+      {
+        "id": "VEwACjt5TrBOjAqxCczpU",
+        "baseID": "VEwACjt5TrBOjAqxCczpU",
+        "name": "Georgia - HIV (take-me-home-georgia)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "GE"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a",
+          "bn": "\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be",
+          "de": "Gratis HIV Test f\u00fcr Zuhause",
+          "en": "Free HIV Home Test",
+          "es": "Auto Prueba de VIH",
+          "fr": "Test HIV gratuit chez soi",
+          "hi": "\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a",
+          "id": "Tes HIV Mandiri Gratis",
+          "it": "Autotest HIV gratuito",
+          "ja": "\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb",
+          "ko": "\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8",
+          "ms": "Ujian HIV Percuma Di Rumah",
+          "pt": "Autoteste para HIV Gr\u00e1tis",
+          "ru": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430",
+          "sw": "Kipimo cha bure cha nyumbani cha HIV",
+          "te": "\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37",
+          "th": "\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35",
+          "tl": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "vi": "X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://www.selftest.ge/ka/grindr",
+          "es-419": "Auto Prueba de VIH",
+          "zh-chs": "\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5",
+          "zh-cht": "\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\"ar\":\"\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a\",\"bn\":\"\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be\",\"de\":\"Gratis HIV Test f\u00fcr Zuhause\",\"en\":\"Free HIV Home Test\",\"es\":\"Auto Prueba de VIH\",\"fr\":\"Test HIV gratuit chez soi\",\"hi\":\"\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a\",\"id\":\"Tes HIV Mandiri Gratis\",\"it\":\"Autotest HIV gratuito\",\"ja\":\"\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb\",\"ko\":\"\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8\",\"ms\":\"Ujian HIV Percuma Di Rumah\",\"pt\":\"Autoteste para HIV Gr\u00e1tis\",\"ru\":\"\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430\",\"sw\":\"Kipimo cha bure cha nyumbani cha HIV\",\"te\":\"\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37\",\"th\":\"\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35\",\"tl\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"vi\":\"X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed\",\"fil\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"url\":\"https://www.selftest.ge/ka/grindr\",\"es-419\":\"Auto Prueba de VIH\",\"zh-chs\":\"\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5\",\"zh-cht\":\"\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c\"}",
+        "environments": null
+      },
+      {
+        "id": "VEwADYvybB67J8m8K8cIW",
+        "baseID": "VEwADYvybB67J8m8K8cIW",
+        "name": "New Zealand (takemehome-nz)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "NZ"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a",
+          "bn": "\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be",
+          "de": "Gratis HIV Test f\u00fcr Zuhause",
+          "en": "Free HIV Self-Test",
+          "es": "Auto Prueba de VIH",
+          "fr": "Test HIV gratuit chez soi",
+          "hi": "\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a",
+          "id": "Tes HIV Mandiri Gratis",
+          "it": "Autotest HIV gratuito",
+          "ja": "\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb",
+          "ko": "\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8",
+          "ms": "Ujian HIV Percuma Di Rumah",
+          "pt": "Autoteste para HIV Gr\u00e1tis",
+          "ru": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430",
+          "sw": "Kipimo cha bure cha nyumbani cha HIV",
+          "te": "\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37",
+          "th": "\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35",
+          "tl": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "vi": "X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://portal.burnettfoundation.org.nz/free-hiv-self-test-kit-on-grindr",
+          "es-419": "Auto Prueba de VIH",
+          "zh-chs": "\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5",
+          "zh-cht": "\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\"ar\":\"\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a\",\"bn\":\"\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be\",\"de\":\"Gratis HIV Test f\u00fcr Zuhause\",\"en\":\"Free HIV Self-Test\",\"es\":\"Auto Prueba de VIH\",\"fr\":\"Test HIV gratuit chez soi\",\"hi\":\"\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a\",\"id\":\"Tes HIV Mandiri Gratis\",\"it\":\"Autotest HIV gratuito\",\"ja\":\"\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb\",\"ko\":\"\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8\",\"ms\":\"Ujian HIV Percuma Di Rumah\",\"pt\":\"Autoteste para HIV Gr\u00e1tis\",\"ru\":\"\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430\",\"sw\":\"Kipimo cha bure cha nyumbani cha HIV\",\"te\":\"\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37\",\"th\":\"\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35\",\"tl\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"vi\":\"X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed\",\"fil\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"url\":\"https://portal.burnettfoundation.org.nz/free-hiv-self-test-kit-on-grindr\",\"es-419\":\"Auto Prueba de VIH\",\"zh-chs\":\"\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5\",\"zh-cht\":\"\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c\"}",
+        "environments": null
+      },
+      {
+        "id": "VEAUChzxdBQa0UHIk98wq",
+        "baseID": "VEAUChzxdBQa0UHIk98wq",
+        "name": "London Only (sti-take-home-london)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "GB"
+            ],
+            "operator": "any"
+          },
+          {
+            "type": "custom_field",
+            "targetValue": [
+              "London"
+            ],
+            "operator": "any",
+            "field": "city"
+          }
+        ],
+        "returnValue": {
+          "ar": "\ufeff\u0645\u062c\u0645\u0648\u0639\u0629 \u0645\u062c\u0627\u0646\u064a\u0629 \u0644\u0623\u062f\u0648\u0627\u062a \u0641\u062d\u0635 \u0627\u0644\u0639\u062f\u0648\u0649 \u0627\u0644\u0645\u0646\u0642\u0648\u0644\u0629 \u062c\u0646\u0633\u064a\u0627\u064b",
+          "bn": "\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7\u09b0 \u09af\u09cc\u09a8\u09ac\u09be\u09b9\u09bf\u09a4 \u09b8\u0982\u0995\u09cd\u09b0\u09ae\u09a3 (STI \u0995\u09bf\u099f",
+          "de": "Kostenloses STI-Kit",
+          "en": "Free STI Kit",
+          "es": "Kit de ITS gratuito",
+          "fr": "Kit gratuit de d\u00e9pistage des IST",
+          "hi": "\u092f\u094c\u0928-\u0938\u0902\u091a\u0930\u093f\u0924 \u0938\u0902\u0915\u094d\u0930\u092e\u0923\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f \u092e\u0941\u095e\u094d\u0924 \u0915\u093f\u091f",
+          "id": "Perlengkapan IMS Gratis",
+          "it": "Kit IST gratuito",
+          "ja": "\u6027\u611f\u67d3\u75c7\u7121\u6599\u691c\u67fb\u30ad\u30c3\u30c8",
+          "ko": "\ubb34\ub8cc STI \ud0a4\ud2b8",
+          "ms": "Kit Ujian Jangkitan Seksual (STI) Percuma",
+          "pt": "Kit de IST gratuito",
+          "ru": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u043d\u0430\u0431\u043e\u0440 \u0434\u043b\u044f \u0442\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u043d\u0430 \u0418\u041f\u041f\u041f",
+          "sw": "Kipimo cha STI Bila Malipo",
+          "te": "\u0c09\u0c1a\u0c3f\u0c24 \u0c32\u0c48\u0c02\u0c17\u0c3f\u0c15\u0c02\u0c17\u0c3e \u0c38\u0c02\u0c15\u0c4d\u0c30\u0c2e\u0c3f\u0c02\u0c1a\u0c47 \u0c35\u0c4d\u0c2f\u0c3e\u0c27\u0c3f(STI) \u0c15\u0c3f\u0c1f\u0c4d\u200c",
+          "th": "\u0e0a\u0e38\u0e14\u0e15\u0e23\u0e27\u0e08\u0e42\u0e23\u0e04\u0e15\u0e34\u0e14\u0e15\u0e48\u0e2d\u0e17\u0e32\u0e07\u0e40\u0e1e\u0e28\u0e2a\u0e31\u0e21\u0e1e\u0e31\u0e19\u0e18\u0e4c\u0e1f\u0e23\u0e35",
+          "vi": "B\u1ed9 d\u1ee5ng c\u1ee5 B\u1ec7nh l\u00e2y truy\u1ec1n qua \u0111\u01b0\u1eddng t\u00ecnh d\u1ee5c mi\u1ec5n ph\u00ed",
+          "fil": "Libreng Pagsusuri ng STI sa Tahanan",
+          "tlh": "Libreng Kit para sa sakit na nakukuha sa pakikipagtalik o STI",
+          "url": "https://grindr.shl.uk/",
+          "zh-cn": "\u514d\u8d39\u7684\u9884\u9632\u6027\u4f20\u64ad\u611f\u67d3 (STI) \u5de5\u5177\u5305",
+          "zh-tw": "\u514d\u8cbb\u6027\u50b3\u64ad\u611f\u67d3 (STI) \u5957\u7d44"
+        },
+        "returnValueJson5": "{\"ar\":\"\ufeff\u0645\u062c\u0645\u0648\u0639\u0629 \u0645\u062c\u0627\u0646\u064a\u0629 \u0644\u0623\u062f\u0648\u0627\u062a \u0641\u062d\u0635 \u0627\u0644\u0639\u062f\u0648\u0649 \u0627\u0644\u0645\u0646\u0642\u0648\u0644\u0629 \u062c\u0646\u0633\u064a\u0627\u064b\",\"bn\":\"\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7\u09b0 \u09af\u09cc\u09a8\u09ac\u09be\u09b9\u09bf\u09a4 \u09b8\u0982\u0995\u09cd\u09b0\u09ae\u09a3 (STI \u0995\u09bf\u099f\",\"de\":\"Kostenloses STI-Kit\",\"en\":\"Free STI Kit\",\"es\":\"Kit de ITS gratuito\",\"fr\":\"Kit gratuit de d\u00e9pistage des IST\",\"hi\":\"\u092f\u094c\u0928-\u0938\u0902\u091a\u0930\u093f\u0924 \u0938\u0902\u0915\u094d\u0930\u092e\u0923\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f \u092e\u0941\u095e\u094d\u0924 \u0915\u093f\u091f\",\"id\":\"Perlengkapan IMS Gratis\",\"it\":\"Kit IST gratuito\",\"ja\":\"\u6027\u611f\u67d3\u75c7\u7121\u6599\u691c\u67fb\u30ad\u30c3\u30c8\",\"ko\":\"\ubb34\ub8cc STI \ud0a4\ud2b8\",\"ms\":\"Kit Ujian Jangkitan Seksual (STI) Percuma\",\"pt\":\"Kit de IST gratuito\",\"ru\":\"\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u043d\u0430\u0431\u043e\u0440 \u0434\u043b\u044f \u0442\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u043d\u0430 \u0418\u041f\u041f\u041f\",\"sw\":\"Kipimo cha STI Bila Malipo\",\"te\":\"\u0c09\u0c1a\u0c3f\u0c24 \u0c32\u0c48\u0c02\u0c17\u0c3f\u0c15\u0c02\u0c17\u0c3e \u0c38\u0c02\u0c15\u0c4d\u0c30\u0c2e\u0c3f\u0c02\u0c1a\u0c47 \u0c35\u0c4d\u0c2f\u0c3e\u0c27\u0c3f(STI) \u0c15\u0c3f\u0c1f\u0c4d\u200c\",\"th\":\"\u0e0a\u0e38\u0e14\u0e15\u0e23\u0e27\u0e08\u0e42\u0e23\u0e04\u0e15\u0e34\u0e14\u0e15\u0e48\u0e2d\u0e17\u0e32\u0e07\u0e40\u0e1e\u0e28\u0e2a\u0e31\u0e21\u0e1e\u0e31\u0e19\u0e18\u0e4c\u0e1f\u0e23\u0e35\",\"vi\":\"B\u1ed9 d\u1ee5ng c\u1ee5 B\u1ec7nh l\u00e2y truy\u1ec1n qua \u0111\u01b0\u1eddng t\u00ecnh d\u1ee5c mi\u1ec5n ph\u00ed\",\"fil\":\"Libreng Pagsusuri ng STI sa Tahanan\",\"tlh\":\"Libreng Kit para sa sakit na nakukuha sa pakikipagtalik o STI\",\"url\":\"https://grindr.shl.uk/\",\"zh-cn\":\"\u514d\u8d39\u7684\u9884\u9632\u6027\u4f20\u64ad\u611f\u67d3 (STI) \u5de5\u5177\u5305\",\"zh-tw\":\"\u514d\u8cbb\u6027\u50b3\u64ad\u611f\u67d3 (STI) \u5957\u7d44\"}",
+        "environments": null
+      },
+      {
+        "id": "VEAUDWBZvLktqsDjs4LPs",
+        "baseID": "VEAUDWBZvLktqsDjs4LPs",
+        "name": "Czechia Take Me Home HIV (takemehome-czechia)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "CZ"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629",
+          "bn": "\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8",
+          "de": "Einen HIV-Test machen",
+          "en": "Find an STI Test",
+          "es": "H\u00e1zte la prueba del VIH",
+          "fr": "Faire un test de d\u00e9pistage du VIH",
+          "hi": "\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902",
+          "id": "Lakukan Tes HIV",
+          "it": "Sottoponiti a un test HIV",
+          "ja": "HIV\u691c\u67fb\u3092\u53d7\u3051\u308b",
+          "ko": "HIV \uac80\uc0ac \ubc1b\uae30",
+          "ms": "Dapatkan Ujian HIV",
+          "pt": "Fa\u00e7a um teste de HIV",
+          "ru": "\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427",
+          "sw": "Fanya Kipimo cha VVU",
+          "te": "\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f",
+          "th": "\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35",
+          "tl": "Magpa-HIV Test",
+          "vi": "X\u00e9t nghi\u1ec7m HIV",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://www.hiv-testovani.cz/?utm_source=grindr&utm_medium=grindr&utm_campaign=button",
+          "es-419": "H\u00e1gase una prueba de VIH",
+          "zh-chs": "\u505a\u4e00\u4e2a HIV \u68c0\u6d4b",
+          "zh-cht": "\u9032\u884c HIV \u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\"ar\":\"\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629\",\"bn\":\"\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8\",\"de\":\"Einen HIV-Test machen\",\"en\":\"Find an STI Test\",\"es\":\"H\u00e1zte la prueba del VIH\",\"fr\":\"Faire un test de d\u00e9pistage du VIH\",\"hi\":\"\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902\",\"id\":\"Lakukan Tes HIV\",\"it\":\"Sottoponiti a un test HIV\",\"ja\":\"HIV\u691c\u67fb\u3092\u53d7\u3051\u308b\",\"ko\":\"HIV \uac80\uc0ac \ubc1b\uae30\",\"ms\":\"Dapatkan Ujian HIV\",\"pt\":\"Fa\u00e7a um teste de HIV\",\"ru\":\"\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427\",\"sw\":\"Fanya Kipimo cha VVU\",\"te\":\"\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f\",\"th\":\"\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35\",\"tl\":\"Magpa-HIV Test\",\"vi\":\"X\u00e9t nghi\u1ec7m HIV\",\"fil\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"url\":\"https://www.hiv-testovani.cz/?utm_source=grindr&utm_medium=grindr&utm_campaign=button\",\"es-419\":\"H\u00e1gase una prueba de VIH\",\"zh-chs\":\"\u505a\u4e00\u4e2a HIV \u68c0\u6d4b\",\"zh-cht\":\"\u9032\u884c HIV \u6aa2\u6e2c\"}",
+        "environments": null
+      },
+      {
+        "id": "VEAUFBErNUOMQ0yUA0p8u",
+        "baseID": "VEAUFBErNUOMQ0yUA0p8u",
+        "name": "UK Take Me Home HIV (takemehome-uk)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "GB"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629",
+          "bn": "\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8",
+          "de": "Einen HIV-Test machen",
+          "en": "Sexual Health Resources",
+          "es": "H\u00e1zte la prueba del VIH",
+          "fr": "Faire un test de d\u00e9pistage du VIH",
+          "hi": "\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902",
+          "id": "Lakukan Tes HIV",
+          "it": "Sottoponiti a un test HIV",
+          "ja": "HIV\u691c\u67fb\u3092\u53d7\u3051\u308b",
+          "ko": "HIV \uac80\uc0ac \ubc1b\uae30",
+          "ms": "Dapatkan Ujian HIV",
+          "pt": "Fa\u00e7a um teste de HIV",
+          "ru": "\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427",
+          "sw": "Fanya Kipimo cha VVU",
+          "te": "\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f",
+          "th": "\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35",
+          "tl": "Magpa-HIV Test",
+          "vi": "X\u00e9t nghi\u1ec7m HIV",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://www.queerhealth.info/",
+          "es-419": "H\u00e1gase una prueba de VIH",
+          "zh-chs": "\u505a\u4e00\u4e2a HIV \u68c0\u6d4b",
+          "zh-cht": "\u9032\u884c HIV \u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\"ar\":\"\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629\",\"bn\":\"\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8\",\"de\":\"Einen HIV-Test machen\",\"en\":\"Sexual Health Resources\",\"es\":\"H\u00e1zte la prueba del VIH\",\"fr\":\"Faire un test de d\u00e9pistage du VIH\",\"hi\":\"\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902\",\"id\":\"Lakukan Tes HIV\",\"it\":\"Sottoponiti a un test HIV\",\"ja\":\"HIV\u691c\u67fb\u3092\u53d7\u3051\u308b\",\"ko\":\"HIV \uac80\uc0ac \ubc1b\uae30\",\"ms\":\"Dapatkan Ujian HIV\",\"pt\":\"Fa\u00e7a um teste de HIV\",\"ru\":\"\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427\",\"sw\":\"Fanya Kipimo cha VVU\",\"te\":\"\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f\",\"th\":\"\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35\",\"tl\":\"Magpa-HIV Test\",\"vi\":\"X\u00e9t nghi\u1ec7m HIV\",\"fil\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"url\":\"https://www.queerhealth.info/\",\"es-419\":\"H\u00e1gase una prueba de VIH\",\"zh-chs\":\"\u505a\u4e00\u4e2a HIV \u68c0\u6d4b\",\"zh-cht\":\"\u9032\u884c HIV \u6aa2\u6e2c\"}",
+        "environments": null
+      },
+      {
+        "id": "VEAUHgGU64j6fyuvHW2rw",
+        "baseID": "VEAUHgGU64j6fyuvHW2rw",
+        "name": "European Take Me Home HIV (takemehome-european)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "BE",
+              "HR",
+              "DK",
+              "EE",
+              "DE",
+              "IT",
+              "KZ",
+              "LV",
+              "LT",
+              "LU",
+              "MT",
+              "NL",
+              "PL",
+              "PT",
+              "RS",
+              "SK",
+              "ES",
+              "SE",
+              "CH",
+              "UA",
+              "AT",
+              "FR",
+              "CY"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629",
+          "bn": "\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8",
+          "de": "Einen HIV-Test machen",
+          "en": "Find an HIV Test",
+          "es": "H\u00e1zte la prueba del VIH",
+          "fr": "Faire un test de d\u00e9pistage du VIH",
+          "hi": "\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902",
+          "id": "Lakukan Tes HIV",
+          "it": "Sottoponiti a un test HIV",
+          "ja": "HIV\u691c\u67fb\u3092\u53d7\u3051\u308b",
+          "ko": "HIV \uac80\uc0ac \ubc1b\uae30",
+          "ms": "Dapatkan Ujian HIV",
+          "pt": "Fa\u00e7a um teste de HIV",
+          "ru": "\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427",
+          "sw": "Fanya Kipimo cha VVU",
+          "te": "\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f",
+          "th": "\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35",
+          "tl": "Magpa-HIV Test",
+          "vi": "X\u00e9t nghi\u1ec7m HIV",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://testfinder.info/?utm_campaign=grindr_ad&utm_medium=ad&utm_source=grindr",
+          "es-419": "H\u00e1gase una prueba de VIH",
+          "zh-chs": "\u505a\u4e00\u4e2a HIV \u68c0\u6d4b",
+          "zh-cht": "\u9032\u884c HIV \u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\"ar\":\"\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629\",\"bn\":\"\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8\",\"de\":\"Einen HIV-Test machen\",\"en\":\"Find an HIV Test\",\"es\":\"H\u00e1zte la prueba del VIH\",\"fr\":\"Faire un test de d\u00e9pistage du VIH\",\"hi\":\"\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902\",\"id\":\"Lakukan Tes HIV\",\"it\":\"Sottoponiti a un test HIV\",\"ja\":\"HIV\u691c\u67fb\u3092\u53d7\u3051\u308b\",\"ko\":\"HIV \uac80\uc0ac \ubc1b\uae30\",\"ms\":\"Dapatkan Ujian HIV\",\"pt\":\"Fa\u00e7a um teste de HIV\",\"ru\":\"\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427\",\"sw\":\"Fanya Kipimo cha VVU\",\"te\":\"\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f\",\"th\":\"\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35\",\"tl\":\"Magpa-HIV Test\",\"vi\":\"X\u00e9t nghi\u1ec7m HIV\",\"fil\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"url\":\"https://testfinder.info/?utm_campaign=grindr_ad&utm_medium=ad&utm_source=grindr\",\"es-419\":\"H\u00e1gase una prueba de VIH\",\"zh-chs\":\"\u505a\u4e00\u4e2a HIV \u68c0\u6d4b\",\"zh-cht\":\"\u9032\u884c HIV \u6aa2\u6e2c\"}",
+        "environments": null
+      },
+      {
+        "id": "VEAUIVJmodNpF6q6PRFKy",
+        "baseID": "VEAUIVJmodNpF6q6PRFKy",
+        "name": "Namibia Take Me Home HIV (takemehome-namibia)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "NA"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629",
+          "bn": "\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8",
+          "de": "Einen HIV-Test machen",
+          "en": "Find an HIV Test",
+          "es": "H\u00e1zte la prueba del VIH",
+          "fr": "Faire un test de d\u00e9pistage du VIH",
+          "hi": "\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902",
+          "id": "Lakukan Tes HIV",
+          "it": "Sottoponiti a un test HIV",
+          "ja": "HIV\u691c\u67fb\u3092\u53d7\u3051\u308b",
+          "ko": "HIV \uac80\uc0ac \ubc1b\uae30",
+          "ms": "Dapatkan Ujian HIV",
+          "pt": "Fa\u00e7a um teste de HIV",
+          "ru": "\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427",
+          "sw": "Fanya Kipimo cha VVU",
+          "te": "\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f",
+          "th": "\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35",
+          "tl": "Magpa-HIV Test",
+          "vi": "X\u00e9t nghi\u1ec7m HIV",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://quickres.org/2642037",
+          "es-419": "H\u00e1gase una prueba de VIH",
+          "zh-chs": "\u505a\u4e00\u4e2a HIV \u68c0\u6d4b",
+          "zh-cht": "\u9032\u884c HIV \u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\"ar\":\"\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629\",\"bn\":\"\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8\",\"de\":\"Einen HIV-Test machen\",\"en\":\"Find an HIV Test\",\"es\":\"H\u00e1zte la prueba del VIH\",\"fr\":\"Faire un test de d\u00e9pistage du VIH\",\"hi\":\"\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902\",\"id\":\"Lakukan Tes HIV\",\"it\":\"Sottoponiti a un test HIV\",\"ja\":\"HIV\u691c\u67fb\u3092\u53d7\u3051\u308b\",\"ko\":\"HIV \uac80\uc0ac \ubc1b\uae30\",\"ms\":\"Dapatkan Ujian HIV\",\"pt\":\"Fa\u00e7a um teste de HIV\",\"ru\":\"\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427\",\"sw\":\"Fanya Kipimo cha VVU\",\"te\":\"\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f\",\"th\":\"\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35\",\"tl\":\"Magpa-HIV Test\",\"vi\":\"X\u00e9t nghi\u1ec7m HIV\",\"fil\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"url\":\"https://quickres.org/2642037\",\"es-419\":\"H\u00e1gase una prueba de VIH\",\"zh-chs\":\"\u505a\u4e00\u4e2a HIV \u68c0\u6d4b\",\"zh-cht\":\"\u9032\u884c HIV \u6aa2\u6e2c\"}",
+        "environments": null
+      },
+      {
+        "id": "VEAUKALOGnhJ4ElHXNj3A",
+        "baseID": "VEAUKALOGnhJ4ElHXNj3A",
+        "name": "Kenya Take Me Home HIV (takemehome-kenya)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "KE"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629",
+          "bn": "\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8",
+          "de": "Einen HIV-Test machen",
+          "en": "Do I have rights?",
+          "es": "H\u00e1zte la prueba del VIH",
+          "fr": "Faire un test de d\u00e9pistage du VIH",
+          "hi": "\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902",
+          "id": "Lakukan Tes HIV",
+          "it": "Sottoponiti a un test HIV",
+          "ja": "HIV\u691c\u67fb\u3092\u53d7\u3051\u308b",
+          "ko": "HIV \uac80\uc0ac \ubc1b\uae30",
+          "ms": "Dapatkan Ujian HIV",
+          "pt": "Fa\u00e7a um teste de HIV",
+          "ru": "\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427",
+          "sw": "Fanya Kipimo cha VVU",
+          "te": "\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f",
+          "th": "\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35",
+          "tl": "Magpa-HIV Test",
+          "vi": "X\u00e9t nghi\u1ec7m HIV",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://www.galck.org/projects/know-your-rights/1",
+          "es-419": "H\u00e1gase una prueba de VIH",
+          "zh-chs": "\u505a\u4e00\u4e2a HIV \u68c0\u6d4b",
+          "zh-cht": "\u9032\u884c HIV \u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\"ar\":\"\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629\",\"bn\":\"\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8\",\"de\":\"Einen HIV-Test machen\",\"en\":\"Do I have rights?\",\"es\":\"H\u00e1zte la prueba del VIH\",\"fr\":\"Faire un test de d\u00e9pistage du VIH\",\"hi\":\"\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902\",\"id\":\"Lakukan Tes HIV\",\"it\":\"Sottoponiti a un test HIV\",\"ja\":\"HIV\u691c\u67fb\u3092\u53d7\u3051\u308b\",\"ko\":\"HIV \uac80\uc0ac \ubc1b\uae30\",\"ms\":\"Dapatkan Ujian HIV\",\"pt\":\"Fa\u00e7a um teste de HIV\",\"ru\":\"\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427\",\"sw\":\"Fanya Kipimo cha VVU\",\"te\":\"\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f\",\"th\":\"\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35\",\"tl\":\"Magpa-HIV Test\",\"vi\":\"X\u00e9t nghi\u1ec7m HIV\",\"fil\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"url\":\"https://www.galck.org/projects/know-your-rights/1\",\"es-419\":\"H\u00e1gase una prueba de VIH\",\"zh-chs\":\"\u505a\u4e00\u4e2a HIV \u68c0\u6d4b\",\"zh-cht\":\"\u9032\u884c HIV \u6aa2\u6e2c\"}",
+        "environments": null
+      },
+      {
+        "id": "VEFeFzKT8538xkQ5hWYf0",
+        "baseID": "VEFeFzKT8538xkQ5hWYf0",
+        "name": "Bulgaria Take Me Home HIV (takemehome-bulgaria)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "BG"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629",
+          "bn": "\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8",
+          "de": "Einen HIV-Test machen",
+          "en": "Find an HIV Test",
+          "es": "H\u00e1zte la prueba del VIH",
+          "fr": "Faire un test de d\u00e9pistage du VIH",
+          "hi": "\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902",
+          "id": "Lakukan Tes HIV",
+          "it": "Sottoponiti a un test HIV",
+          "ja": "HIV\u691c\u67fb\u3092\u53d7\u3051\u308b",
+          "ko": "HIV \uac80\uc0ac \ubc1b\uae30",
+          "ms": "Dapatkan Ujian HIV",
+          "pt": "Fa\u00e7a um teste de HIV",
+          "ru": "\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427",
+          "sw": "Fanya Kipimo cha VVU",
+          "te": "\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f",
+          "th": "\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35",
+          "tl": "Magpa-HIV Test",
+          "vi": "X\u00e9t nghi\u1ec7m HIV",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://ivor.bg/labs/?utm_source=Grindr&utm_medium=SD&utm_campaign=Link",
+          "es-419": "H\u00e1gase una prueba de VIH",
+          "zh-chs": "\u505a\u4e00\u4e2a HIV \u68c0\u6d4b",
+          "zh-cht": "\u9032\u884c HIV \u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\"ar\":\"\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629\",\"bn\":\"\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8\",\"de\":\"Einen HIV-Test machen\",\"en\":\"Find an HIV Test\",\"es\":\"H\u00e1zte la prueba del VIH\",\"fr\":\"Faire un test de d\u00e9pistage du VIH\",\"hi\":\"\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902\",\"id\":\"Lakukan Tes HIV\",\"it\":\"Sottoponiti a un test HIV\",\"ja\":\"HIV\u691c\u67fb\u3092\u53d7\u3051\u308b\",\"ko\":\"HIV \uac80\uc0ac \ubc1b\uae30\",\"ms\":\"Dapatkan Ujian HIV\",\"pt\":\"Fa\u00e7a um teste de HIV\",\"ru\":\"\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427\",\"sw\":\"Fanya Kipimo cha VVU\",\"te\":\"\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f\",\"th\":\"\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35\",\"tl\":\"Magpa-HIV Test\",\"vi\":\"X\u00e9t nghi\u1ec7m HIV\",\"fil\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"url\":\"https://ivor.bg/labs/?utm_source=Grindr&utm_medium=SD&utm_campaign=Link\",\"es-419\":\"H\u00e1gase una prueba de VIH\",\"zh-chs\":\"\u505a\u4e00\u4e2a HIV \u68c0\u6d4b\",\"zh-cht\":\"\u9032\u884c HIV \u6aa2\u6e2c\"}",
+        "environments": null
+      },
+      {
+        "id": "VEFeHeNlqexrWSLGpSBy2",
+        "baseID": "VEFeHeNlqexrWSLGpSBy2",
+        "name": "Brazil Take Me Home HIV (takemehome-brazil)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "BR"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629",
+          "bn": "\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8",
+          "de": "Einen HIV-Test machen",
+          "en": "Where to find PrEP?",
+          "es": "H\u00e1zte la prueba del VIH",
+          "fr": "Faire un test de d\u00e9pistage du VIH",
+          "hi": "\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902",
+          "id": "Lakukan Tes HIV",
+          "it": "Sottoponiti a un test HIV",
+          "ja": "HIV\u691c\u67fb\u3092\u53d7\u3051\u308b",
+          "ko": "HIV \uac80\uc0ac \ubc1b\uae30",
+          "ms": "Dapatkan Ujian HIV",
+          "pt": "Fa\u00e7a um teste de HIV",
+          "ru": "\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427",
+          "sw": "Fanya Kipimo cha VVU",
+          "te": "\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f",
+          "th": "\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35",
+          "tl": "Magpa-HIV Test",
+          "vi": "X\u00e9t nghi\u1ec7m HIV",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://app.powerbi.com/view?r=eyJrIjoiMmIwNTg5YTAtMWEyMi00YzMzLWE0YmQtMmUwNzQxZjkzYTc5IiwidCI6IjZjMzhiMTU4LWI4OGItNGZjNS04NDkxLTFjNWI0NmI3NDJhYyJ9",
+          "es-419": "H\u00e1gase una prueba de VIH",
+          "zh-chs": "\u505a\u4e00\u4e2a HIV \u68c0\u6d4b",
+          "zh-cht": "\u9032\u884c HIV \u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\"ar\":\"\u0627\u0644\u062e\u0636\u0648\u0639 \u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u064a\u0631\u0648\u0633 \u0646\u0642\u0635 \u0627\u0644\u0645\u0646\u0627\u0639\u0629 \u0627\u0644\u0628\u0634\u0631\u064a\u0629\",\"bn\":\"\u098f\u0995\u099f\u09bf \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be \u0995\u09b0\u09be\u09a8\",\"de\":\"Einen HIV-Test machen\",\"en\":\"Where to find PrEP?\",\"es\":\"H\u00e1zte la prueba del VIH\",\"fr\":\"Faire un test de d\u00e9pistage du VIH\",\"hi\":\"\u090f\u091a\u0906\u0908\u0935\u0940 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0935\u093e\u090f\u0902\",\"id\":\"Lakukan Tes HIV\",\"it\":\"Sottoponiti a un test HIV\",\"ja\":\"HIV\u691c\u67fb\u3092\u53d7\u3051\u308b\",\"ko\":\"HIV \uac80\uc0ac \ubc1b\uae30\",\"ms\":\"Dapatkan Ujian HIV\",\"pt\":\"Fa\u00e7a um teste de HIV\",\"ru\":\"\u041f\u0440\u043e\u0439\u0442\u0438 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427\",\"sw\":\"Fanya Kipimo cha VVU\",\"te\":\"\u0c39\u0c46\u0c1a\u0c4d\u200c\u0c10\u200c\u0c35\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37 \u0c1a\u0c47\u0c2f\u0c3f\u0c02\u0c1a\u0c41\u0c15\u0c4b\u0c02\u0c21\u0c3f\",\"th\":\"\u0e23\u0e31\u0e1a\u0e01\u0e32\u0e23\u0e15\u0e23\u0e27\u0e08\u0e40\u0e2d\u0e0a\u0e44\u0e2d\u0e27\u0e35\",\"tl\":\"Magpa-HIV Test\",\"vi\":\"X\u00e9t nghi\u1ec7m HIV\",\"fil\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"url\":\"https://app.powerbi.com/view?r=eyJrIjoiMmIwNTg5YTAtMWEyMi00YzMzLWE0YmQtMmUwNzQxZjkzYTc5IiwidCI6IjZjMzhiMTU4LWI4OGItNGZjNS04NDkxLTFjNWI0NmI3NDJhYyJ9\",\"es-419\":\"H\u00e1gase una prueba de VIH\",\"zh-chs\":\"\u505a\u4e00\u4e2a HIV \u68c0\u6d4b\",\"zh-cht\":\"\u9032\u884c HIV \u6aa2\u6e2c\"}",
+        "environments": null
+      },
+      {
+        "id": "VEFeITPNIo1LmqHhxOeR4",
+        "baseID": "VEFeITPNIo1LmqHhxOeR4",
+        "name": "(mpox-resources)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "BR",
+              "IN",
+              "GB",
+              "ES",
+              "PH",
+              "FR",
+              "IT",
+              "CA",
+              "DE",
+              "MY",
+              "PL",
+              "TW",
+              "NL",
+              "PT",
+              "ZA",
+              "IL",
+              "DZ",
+              "EG",
+              "VN",
+              "BE",
+              "TH",
+              "SG",
+              "IQ",
+              "MA",
+              "ID",
+              "GR",
+              "CH",
+              "HK",
+              "SE",
+              "RO",
+              "CZ",
+              "NG",
+              "AT",
+              "JP",
+              "RS",
+              "DK",
+              "PR",
+              "KW",
+              "BG",
+              "NO",
+              "JO",
+              "FI",
+              "HU",
+              "LK",
+              "HR",
+              "SK",
+              "KR",
+              "KE",
+              "TN",
+              "KH",
+              "LB",
+              "BD",
+              "BH",
+              "AE",
+              "PK",
+              "CY",
+              "RU",
+              "CN",
+              "SI",
+              "BA",
+              "OM",
+              "LT",
+              "TT",
+              "CI",
+              "QA",
+              "MT",
+              "MK",
+              "TR",
+              "NP",
+              "JM",
+              "AL",
+              "MU",
+              "MM",
+              "GH",
+              "SN",
+              "LU",
+              "AM",
+              "CM",
+              "LV",
+              "SA",
+              "TZ",
+              "RE",
+              "PS",
+              "EE",
+              "ET",
+              "ME",
+              "LY",
+              "FJ",
+              "IS",
+              "XK",
+              "BN",
+              "BS",
+              "UA",
+              "AZ",
+              "UG",
+              "GP",
+              "GY",
+              "MN",
+              "NA",
+              "AW",
+              "ZW",
+              "MO",
+              "MD",
+              "BB",
+              "LA",
+              "MQ",
+              "SR",
+              "GU",
+              "BY",
+              "CW",
+              "AD",
+              "MV",
+              "KZ",
+              "SD",
+              "HT",
+              "ZM",
+              "PF",
+              "GF",
+              "NC",
+              "BW",
+              "AO",
+              "JE",
+              "ML",
+              "TG",
+              "KY",
+              "IR",
+              "BF",
+              "BJ",
+              "CD",
+              "SC",
+              "MZ",
+              "MG",
+              "UZ",
+              "VI",
+              "IM",
+              "RW",
+              "BM",
+              "GI",
+              "MR",
+              "LC",
+              "KG",
+              "GN",
+              "GD",
+              "SO",
+              "BT",
+              "SZ",
+              "MF",
+              "GA",
+              "CV",
+              "SX",
+              "PG",
+              "BQ",
+              "CG",
+              "KN",
+              "GM",
+              "GG",
+              "TC",
+              "AG",
+              "VC",
+              "MW",
+              "MS",
+              "VG",
+              "YT",
+              "GL",
+              "MP",
+              "DJ",
+              "NE",
+              "SL",
+              "FO",
+              "TD",
+              "SM",
+              "MC",
+              "DM",
+              "BL",
+              "LS",
+              "TL",
+              "WS",
+              "LI",
+              "SY",
+              "AI",
+              "BI",
+              "CK",
+              "AX",
+              "GQ",
+              "LR",
+              "VU",
+              "SS",
+              "AF",
+              "SB",
+              "AS",
+              "PW",
+              "FK",
+              "TJ",
+              "YE",
+              "TO",
+              "GW",
+              "IO",
+              "KM",
+              "CF",
+              "ST",
+              "NR",
+              "SH",
+              "MH",
+              "FM",
+              "NF",
+              "VA",
+              "WF",
+              "TM",
+              "KP",
+              "NU",
+              "PM",
+              "KI",
+              "ER",
+              "TV",
+              "EH",
+              "TK",
+              "CX"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0645\u0648\u0627\u0631\u062f \u062c\u062f\u0631\u064a \u0627\u0644\u0642\u0631\u0648\u062f",
+          "bn": "\u09ae\u09be\u0999\u09cd\u0995\u09bf\u09aa\u0995\u09cd\u09b8 \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995\u09bf\u09a4 \u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8",
+          "de": "Mpox-Ressourcen",
+          "en": "Mpox Resources",
+          "es": "Recursos sobre la viruela s\u00edmica",
+          "fr": "Ressources sur la variole du singe",
+          "hi": "\u092e\u0902\u0915\u0940\u092a\u0949\u0915\u094d\u0938 \u0938\u0902\u0938\u093e\u0927\u0928",
+          "id": "Sumber daya Mpox",
+          "it": "Risorse MPX",
+          "ja": "\u30b5\u30eb\u75d8\u306b\u95a2\u3059\u308b\u30ea\u30bd\u30fc\u30b9",
+          "ko": "\uc5e0\ud3ed\uc2a4 \ub9ac\uc18c\uc2a4",
+          "ms": "Sumber Cacar Monyet",
+          "pt": "Recursos para a var\u00edola dos macacos",
+          "ru": "\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b \u043f\u043e \u043e\u0431\u0435\u0437\u044c\u044f\u043d\u044c\u0435\u0439 \u043e\u0441\u043f\u0435",
+          "sw": "Rasilimali za Monkeypox",
+          "te": "\u0c2e\u0c02\u0c15\u0c40 \u0c2a\u0c3e\u0c15\u0c4d\u0c38\u0c4d \u0c35\u0c28\u0c30\u0c41\u0c32\u0c41",
+          "th": "\u0e17\u0e23\u0e31\u0e1e\u0e22\u0e32\u0e01\u0e23 Mpox",
+          "tl": "Resources ng Mpox",
+          "vi": "Ngu\u1ed3n l\u1ef1c v\u1ec1 \u0111\u1eadu m\u00f9a kh\u1ec9",
+          "fil": "Mga resource sa Mpox",
+          "url": "https://help.grindr.com/hc/en-us/articles/8216530716307",
+          "es-419": "Recursos sobre la viruela s\u00edmica",
+          "zh-chs": "\u7334\u75d8\u8d44\u6e90",
+          "zh-cht": "\u7334\u75d8\u8cc7\u6e90"
+        },
+        "returnValueJson5": "{\"ar\":\"\u0645\u0648\u0627\u0631\u062f \u062c\u062f\u0631\u064a \u0627\u0644\u0642\u0631\u0648\u062f\",\"bn\":\"\u09ae\u09be\u0999\u09cd\u0995\u09bf\u09aa\u0995\u09cd\u09b8 \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995\u09bf\u09a4 \u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8\",\"de\":\"Mpox-Ressourcen\",\"en\":\"Mpox Resources\",\"es\":\"Recursos sobre la viruela s\u00edmica\",\"fr\":\"Ressources sur la variole du singe\",\"hi\":\"\u092e\u0902\u0915\u0940\u092a\u0949\u0915\u094d\u0938 \u0938\u0902\u0938\u093e\u0927\u0928\",\"id\":\"Sumber daya Mpox\",\"it\":\"Risorse MPX\",\"ja\":\"\u30b5\u30eb\u75d8\u306b\u95a2\u3059\u308b\u30ea\u30bd\u30fc\u30b9\",\"ko\":\"\uc5e0\ud3ed\uc2a4 \ub9ac\uc18c\uc2a4\",\"ms\":\"Sumber Cacar Monyet\",\"pt\":\"Recursos para a var\u00edola dos macacos\",\"ru\":\"\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b \u043f\u043e \u043e\u0431\u0435\u0437\u044c\u044f\u043d\u044c\u0435\u0439 \u043e\u0441\u043f\u0435\",\"sw\":\"Rasilimali za Monkeypox\",\"te\":\"\u0c2e\u0c02\u0c15\u0c40 \u0c2a\u0c3e\u0c15\u0c4d\u0c38\u0c4d \u0c35\u0c28\u0c30\u0c41\u0c32\u0c41\",\"th\":\"\u0e17\u0e23\u0e31\u0e1e\u0e22\u0e32\u0e01\u0e23 Mpox\",\"tl\":\"Resources ng Mpox\",\"vi\":\"Ngu\u1ed3n l\u1ef1c v\u1ec1 \u0111\u1eadu m\u00f9a kh\u1ec9\",\"fil\":\"Mga resource sa Mpox\",\"url\":\"https://help.grindr.com/hc/en-us/articles/8216530716307\",\"es-419\":\"Recursos sobre la viruela s\u00edmica\",\"zh-chs\":\"\u7334\u75d8\u8d44\u6e90\",\"zh-cht\":\"\u7334\u75d8\u8cc7\u6e90\"}",
+        "environments": null
+      },
+      {
+        "id": "VEFeKySg0xw4LYCSFJSa6",
+        "baseID": "VEFeKySg0xw4LYCSFJSa6",
+        "name": "Australia (australia)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "AU"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a",
+          "bn": "\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be",
+          "de": "Gratis HIV Test f\u00fcr Zuhause",
+          "en": "Free HIV Self-Test",
+          "es": "Auto Prueba de VIH",
+          "fr": "Test HIV gratuit chez soi",
+          "hi": "\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a",
+          "id": "Tes HIV Mandiri Gratis",
+          "it": "Autotest HIV gratuito",
+          "ja": "\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb",
+          "ko": "\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8",
+          "ms": "Ujian HIV Percuma Di Rumah",
+          "pt": "Autoteste para HIV Gr\u00e1tis",
+          "ru": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430",
+          "sw": "Kipimo cha bure cha nyumbani cha HIV",
+          "te": "\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37",
+          "th": "\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35",
+          "tl": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "vi": "X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed",
+          "fil": "Libreng Pagsusuri ng HIV sa Tahanan",
+          "url": "https://self.hivtest.au/?utm_source=gr-side&utm_campaign=HSTGRSD&utm_id=gr-side",
+          "es-419": "Auto Prueba de VIH",
+          "zh-chs": "\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5",
+          "zh-cht": "\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c"
+        },
+        "returnValueJson5": "{\"ar\":\"\u0627\u062e\u062a\u0628\u0627\u0631 HIV \u0627\u0644\u0645\u0646\u0632\u0644\u064a \u0627\u0644\u0645\u062c\u0627\u0646\u064a\",\"bn\":\"\u09ac\u09bf\u09a8\u09be\u09ae\u09c2\u09b2\u09cd\u09af\u09c7 \u09ac\u09be\u09b8\u09be\u09df \u098f\u0987\u099a\u0986\u0987\u09ad\u09bf \u09aa\u09b0\u09c0\u0995\u09cd\u09b7\u09be\",\"de\":\"Gratis HIV Test f\u00fcr Zuhause\",\"en\":\"Free HIV Self-Test\",\"es\":\"Auto Prueba de VIH\",\"fr\":\"Test HIV gratuit chez soi\",\"hi\":\"\u092e\u0941\u095e\u094d\u0924 \u090f\u091a\u0906\u0908\u0935\u0940 \u0918\u0930 \u092a\u0930 \u091c\u093e\u0902\u091a\",\"id\":\"Tes HIV Mandiri Gratis\",\"it\":\"Autotest HIV gratuito\",\"ja\":\"\u3054\u81ea\u5b85\u3067\u306e\u7121\u6599HIV\u691c\u67fb\",\"ko\":\"\ubb34\ub8cc \uac00\uc815\uc6a9 HIV \uc2dc\ud5d8\",\"ms\":\"Ujian HIV Percuma Di Rumah\",\"pt\":\"Autoteste para HIV Gr\u00e1tis\",\"ru\":\"\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0439 \u0442\u0435\u0441\u0442 \u043d\u0430 \u0412\u0418\u0427 \u0434\u043e\u043c\u0430\",\"sw\":\"Kipimo cha bure cha nyumbani cha HIV\",\"te\":\"\u0c09\u0c1a\u0c3f\u0c24 HIV \u0c07\u0c02\u0c1f\u0c3f \u0c2a\u0c30\u0c40\u0c15\u0c4d\u0c37\",\"th\":\"\u0e40\u0e17\u0e2a HIV \u0e17\u0e35\u0e48\u0e1a\u0e49\u0e32\u0e19\u0e1f\u0e23\u0e35\",\"tl\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"vi\":\"X\u00e9t nghi\u1ec7m HIV t\u1ea1i nh\u00e0 mi\u1ec5n ph\u00ed\",\"fil\":\"Libreng Pagsusuri ng HIV sa Tahanan\",\"url\":\"https://self.hivtest.au/?utm_source=gr-side&utm_campaign=HSTGRSD&utm_id=gr-side\",\"es-419\":\"Auto Prueba de VIH\",\"zh-chs\":\"\u514d\u8d39\u7684HIV\u5c45\u5bb6\u6d4b\u8bd5\",\"zh-cht\":\"\u514d\u8cbb HIV \u5bb6\u7528\u81ea\u6211\u6aa2\u6e2c\"}",
+        "environments": null
+      },
+      {
+        "id": "VEFeMdUIiH0obwytNFvt8",
+        "baseID": "VEFeMdUIiH0obwytNFvt8",
+        "name": "PAHO - English (paho-english)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "AG",
+              "BS",
+              "BB",
+              "DM",
+              "GD",
+              "GY",
+              "HT",
+              "JM",
+              "KN",
+              "LC",
+              "VC",
+              "SR",
+              "TT"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "Better with PrEP",
+          "bn": "Better with PrEP",
+          "de": "Better with PrEP",
+          "en": "Better with PrEP",
+          "es": "Mejor con PrEP",
+          "fr": "Better with PrEP",
+          "hi": "Better with PrEP",
+          "id": "Better with PrEP",
+          "it": "Better with PrEP",
+          "ja": "Better with PrEP",
+          "ko": "Better with PrEP",
+          "ms": "Better with PrEP",
+          "pt": "Better with PrEP",
+          "ru": "Better with PrEP",
+          "sw": "Better with PrEP",
+          "te": "Better with PrEP",
+          "th": "Better with PrEP",
+          "tl": "Better with PrEP",
+          "vi": "Better with PrEP",
+          "fil": "Better with PrEP",
+          "url": "https://www.paho.org/en/better-prep",
+          "es-419": "Better with PrEP",
+          "zh-chs": "Better with PrEP",
+          "zh-cht": "Better with PrEP"
+        },
+        "returnValueJson5": "{\"ar\":\"Better with PrEP\",\"bn\":\"Better with PrEP\",\"de\":\"Better with PrEP\",\"en\":\"Better with PrEP\",\"es\":\"Mejor con PrEP\",\"fr\":\"Better with PrEP\",\"hi\":\"Better with PrEP\",\"id\":\"Better with PrEP\",\"it\":\"Better with PrEP\",\"ja\":\"Better with PrEP\",\"ko\":\"Better with PrEP\",\"ms\":\"Better with PrEP\",\"pt\":\"Better with PrEP\",\"ru\":\"Better with PrEP\",\"sw\":\"Better with PrEP\",\"te\":\"Better with PrEP\",\"th\":\"Better with PrEP\",\"tl\":\"Better with PrEP\",\"vi\":\"Better with PrEP\",\"fil\":\"Better with PrEP\",\"url\":\"https://www.paho.org/en/better-prep\",\"es-419\":\"Better with PrEP\",\"zh-chs\":\"Better with PrEP\",\"zh-cht\":\"Better with PrEP\"}",
+        "environments": null
+      },
+      {
+        "id": "VEFeNSXaAQuHB4u4VB8Ma",
+        "baseID": "VEFeNSXaAQuHB4u4VB8Ma",
+        "name": "PAHO - Spanish (paho-spanish)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "VE",
+              "UY",
+              "PE",
+              "PY",
+              "PA",
+              "NI",
+              "MX",
+              "HN",
+              "GT",
+              "SV",
+              "EC",
+              "DO",
+              "CU",
+              "CR",
+              "CO",
+              "CL",
+              "BO",
+              "AR"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "Mejor con PrEP",
+          "bn": "Mejor con PrEP",
+          "de": "Mejor con PrEP",
+          "en": "Better with PrEP",
+          "es": "Mejor con PrEP",
+          "fr": "Mejor con PrEP",
+          "hi": "Mejor con PrEP",
+          "id": "Mejor con PrEP",
+          "it": "Mejor con PrEP",
+          "ja": "Mejor con PrEP",
+          "ko": "Mejor con PrEP",
+          "ms": "Mejor con PrEP",
+          "pt": "Mejor con PrEP",
+          "ru": "Mejor con PrEP",
+          "sw": "Mejor con PrEP",
+          "te": "Mejor con PrEP",
+          "th": "Mejor con PrEP",
+          "tl": "Mejor con PrEP",
+          "vi": "Mejor con PrEP",
+          "fil": "Mejor con PrEP",
+          "url": "https://www.paho.org/es/mejor-con-prep",
+          "es-419": "Mejor con PrEP",
+          "zh-chs": "Mejor con PrEP",
+          "zh-cht": "Mejor con PrEP"
+        },
+        "returnValueJson5": "{\"ar\":\"Mejor con PrEP\",\"bn\":\"Mejor con PrEP\",\"de\":\"Mejor con PrEP\",\"en\":\"Better with PrEP\",\"es\":\"Mejor con PrEP\",\"fr\":\"Mejor con PrEP\",\"hi\":\"Mejor con PrEP\",\"id\":\"Mejor con PrEP\",\"it\":\"Mejor con PrEP\",\"ja\":\"Mejor con PrEP\",\"ko\":\"Mejor con PrEP\",\"ms\":\"Mejor con PrEP\",\"pt\":\"Mejor con PrEP\",\"ru\":\"Mejor con PrEP\",\"sw\":\"Mejor con PrEP\",\"te\":\"Mejor con PrEP\",\"th\":\"Mejor con PrEP\",\"tl\":\"Mejor con PrEP\",\"vi\":\"Mejor con PrEP\",\"fil\":\"Mejor con PrEP\",\"url\":\"https://www.paho.org/es/mejor-con-prep\",\"es-419\":\"Mejor con PrEP\",\"zh-chs\":\"Mejor con PrEP\",\"zh-cht\":\"Mejor con PrEP\"}",
+        "environments": null
+      },
+      {
+        "id": "VEFePxZCSZZ10CpG3wM5c",
+        "baseID": "VEFePxZCSZZ10CpG3wM5c",
+        "name": "Latin America (mpox-resources-latam)",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "MX",
+              "CO",
+              "AR",
+              "PE",
+              "VE",
+              "CL",
+              "EC",
+              "GT",
+              "CU",
+              "BO",
+              "DO",
+              "HN",
+              "PY",
+              "SV",
+              "NI",
+              "CR",
+              "PA",
+              "UY",
+              "BZ"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "ar": "\u0645\u0648\u0627\u0631\u062f \u062c\u062f\u0631\u064a \u0627\u0644\u0642\u0631\u0648\u062f",
+          "bn": "\u09ae\u09be\u0999\u09cd\u0995\u09bf\u09aa\u0995\u09cd\u09b8 \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995\u09bf\u09a4 \u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8",
+          "de": "Mpox-Ressourcen",
+          "en": "Mpox Resources",
+          "es": "Sobre la Viruela S\u00edmica",
+          "fr": "Ressources sur la variole du singe",
+          "hi": "\u092e\u0902\u0915\u0940\u092a\u0949\u0915\u094d\u0938 \u0938\u0902\u0938\u093e\u0927\u0928",
+          "id": "Sumber daya Mpox",
+          "it": "Risorse MPX",
+          "ja": "\u30b5\u30eb\u75d8\u306b\u95a2\u3059\u308b\u30ea\u30bd\u30fc\u30b9",
+          "ko": "\uc5e0\ud3ed\uc2a4 \ub9ac\uc18c\uc2a4",
+          "ms": "Sumber Cacar Monyet",
+          "pt": "Recursos para a var\u00edola dos macacos",
+          "ru": "\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b \u043f\u043e \u043e\u0431\u0435\u0437\u044c\u044f\u043d\u044c\u0435\u0439 \u043e\u0441\u043f\u0435",
+          "sw": "Rasilimali za Monkeypox",
+          "te": "\u0c2e\u0c02\u0c15\u0c40 \u0c2a\u0c3e\u0c15\u0c4d\u0c38\u0c4d \u0c35\u0c28\u0c30\u0c41\u0c32\u0c41",
+          "th": "\u0e17\u0e23\u0e31\u0e1e\u0e22\u0e32\u0e01\u0e23 Mpox",
+          "tl": "Resources ng Mpox",
+          "vi": "Ngu\u1ed3n l\u1ef1c v\u1ec1 \u0111\u1eadu m\u00f9a kh\u1ec9",
+          "fil": "Mga resource sa Mpox",
+          "url": "https://www.paho.org/es/brote-por-enfermedad-viruela-simica-2022/viruela-simica-consejos-recursos-para-poblacion",
+          "es-419": "Sobre la Viruela S\u00edmica",
+          "zh-chs": "\u7334\u75d8\u8d44\u6e90",
+          "zh-cht": "\u7334\u75d8\u8cc7\u6e90"
+        },
+        "returnValueJson5": "{\"ar\":\"\u0645\u0648\u0627\u0631\u062f \u062c\u062f\u0631\u064a \u0627\u0644\u0642\u0631\u0648\u062f\",\"bn\":\"\u09ae\u09be\u0999\u09cd\u0995\u09bf\u09aa\u0995\u09cd\u09b8 \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995\u09bf\u09a4 \u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09a8\",\"de\":\"Mpox-Ressourcen\",\"en\":\"Mpox Resources\",\"es\":\"Sobre la Viruela S\u00edmica\",\"fr\":\"Ressources sur la variole du singe\",\"hi\":\"\u092e\u0902\u0915\u0940\u092a\u0949\u0915\u094d\u0938 \u0938\u0902\u0938\u093e\u0927\u0928\",\"id\":\"Sumber daya Mpox\",\"it\":\"Risorse MPX\",\"ja\":\"\u30b5\u30eb\u75d8\u306b\u95a2\u3059\u308b\u30ea\u30bd\u30fc\u30b9\",\"ko\":\"\uc5e0\ud3ed\uc2a4 \ub9ac\uc18c\uc2a4\",\"ms\":\"Sumber Cacar Monyet\",\"pt\":\"Recursos para a var\u00edola dos macacos\",\"ru\":\"\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b \u043f\u043e \u043e\u0431\u0435\u0437\u044c\u044f\u043d\u044c\u0435\u0439 \u043e\u0441\u043f\u0435\",\"sw\":\"Rasilimali za Monkeypox\",\"te\":\"\u0c2e\u0c02\u0c15\u0c40 \u0c2a\u0c3e\u0c15\u0c4d\u0c38\u0c4d \u0c35\u0c28\u0c30\u0c41\u0c32\u0c41\",\"th\":\"\u0e17\u0e23\u0e31\u0e1e\u0e22\u0e32\u0e01\u0e23 Mpox\",\"tl\":\"Resources ng Mpox\",\"vi\":\"Ngu\u1ed3n l\u1ef1c v\u1ec1 \u0111\u1eadu m\u00f9a kh\u1ec9\",\"fil\":\"Mga resource sa Mpox\",\"url\":\"https://www.paho.org/es/brote-por-enfermedad-viruela-simica-2022/viruela-simica-consejos-recursos-para-poblacion\",\"es-419\":\"Sobre la Viruela S\u00edmica\",\"zh-chs\":\"\u7334\u75d8\u8d44\u6e90\",\"zh-cht\":\"\u7334\u75d8\u8cc7\u6e90\"}",
+        "environments": null
+      }
+    ],
+    "defaultValue": {
+      "url": "https://help.grindr.com/hc/en-us/articles/8216530716307",
+      "enabled": true,
+      "linkCopy": "Mpox Resources"
+    },
+    "defaultValueJson5": "{\n  \"url\": \"https://help.grindr.com/hc/en-us/articles/8216530716307\",\n  \"enabled\": true,\n  \"linkCopy\": \"Mpox Resources\"\n}",
+    "version": 3
+  },
+  {
+    "id": "applovin-native-inbox-ads-enabled",
+    "name": "applovin-native-inbox-ads-enabled",
+    "description": "Flag created to manage AppLovin TPA Inbox Ad",
+    "idType": "profileId",
+    "lastModifierID": "71Zz93gHclRwtlNbGok1fH",
+    "lastModifiedTime": 1745882373184,
+    "lastModifierName": "paola.medina ",
+    "lastModifierEmail": "paola.medina@team.grindr.com",
+    "creatorID": "7C0mjI9kZMWDF2QVjqR15o",
+    "createdTime": 1740694725871,
+    "creatorName": "Luis Salinas",
+    "creatorEmail": "luis.salinas@team.grindr.com",
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [
+      "Ads"
+    ],
+    "team": null,
+    "owner": {
+      "ownerID": "7C0mjI9kZMWDF2QVjqR15o",
+      "ownerType": "USER",
+      "ownerName": "Luis Salinas",
+      "ownerEmail": "luis.salinas@team.grindr.com"
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "SEkAaVGBjlWh6WPfWldpT",
+        "baseID": "SEkAaVGBjlWh6WPfWldpT",
+        "name": "User Overrides",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "custom_field",
+            "targetValue": [
+              "713834808",
+              "698603496",
+              "575544994",
+              "626274429",
+              "734985367",
+              "133985636",
+              "133984401",
+              "648618901"
+            ],
+            "operator": "any",
+            "field": "profileId"
+          }
+        ],
+        "returnValue": {
+          "refreshType": "INBOX_VISIT"
+        },
+        "returnValueJson5": "{\n  \"refreshType\": \"INBOX_VISIT\",\n}\n",
+        "environments": [
+          "production"
+        ]
+      },
+      {
+        "id": "4gU0iOdPDEpX9dRvUEuiM7",
+        "baseID": "4gU0iOdPDEpX9dRvUEuiM7",
+        "name": "User Override No Pass",
+        "passPercentage": 0,
+        "conditions": [
+          {
+            "type": "custom_field",
+            "targetValue": [
+              "622592077",
+              "133985141"
+            ],
+            "operator": "any",
+            "field": "profileId"
+          }
+        ],
+        "returnValue": {},
+        "returnValueJson5": "{}\n",
+        "environments": [
+          "production",
+          "development"
+        ]
+      },
+      {
+        "id": "1BdunE4XdF7UDCemakU139",
+        "baseID": "1BdunE4XdF7UDCemakU139",
+        "name": "Debug - Non US",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "US"
+            ],
+            "operator": "none"
+          }
+        ],
+        "returnValue": {
+          "refreshType": "INBOX_VISIT"
+        },
+        "returnValueJson5": "{\n  \"refreshType\": \"INBOX_VISIT\",\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "5wQU5qBeMt3lcjeBtBnmCy:100.00:1",
+        "baseID": "5wQU5qBeMt3lcjeBtBnmCy",
+        "name": "Prod - Non US",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "US"
+            ],
+            "operator": "none"
+          }
+        ],
+        "returnValue": {
+          "refreshType": "INBOX_VISIT"
+        },
+        "returnValueJson5": "{\n  \"refreshType\": \"INBOX_VISIT\",\n}\n",
+        "environments": [
+          "production"
+        ]
+      }
+    ],
+    "defaultValue": {},
+    "defaultValueJson5": "//Add your Dynamic Config below\n\n{}\n",
+    "version": 26
+  },
+  {
+    "id": "ad-interstitial-config",
+    "name": "ad-interstitial-config",
+    "description": "Configures the interstitial ad unit",
+    "idType": "profileId",
+    "lastModifierID": "7C0mjI9kZMWDF2QVjqR15o",
+    "lastModifiedTime": 1748551979368,
+    "lastModifierName": "Luis Salinas",
+    "lastModifierEmail": "luis.salinas@team.grindr.com",
+    "creatorID": "7C0mjI9kZMWDF2QVjqR15o",
+    "createdTime": 1740689733437,
+    "creatorName": "Luis Salinas",
+    "creatorEmail": "luis.salinas@team.grindr.com",
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [
+      "Ads"
+    ],
+    "team": null,
+    "owner": {
+      "ownerID": "7C0mjI9kZMWDF2QVjqR15o",
+      "ownerType": "USER",
+      "ownerName": "Luis Salinas",
+      "ownerEmail": "luis.salinas@team.grindr.com"
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "45WaTfs2us5m72TCHmKs8G",
+        "baseID": "45WaTfs2us5m72TCHmKs8G",
+        "name": "Only CA in dev",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "custom_field",
+            "targetValue": [
+              "CA"
+            ],
+            "operator": "str_contains_any",
+            "field": "state"
+          },
+          {
+            "type": "country",
+            "targetValue": [
+              "US"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "dailyLimit": 48,
+          "upsellTypes": [
+            "POST_AD_VIEW"
+          ],
+          "triggerTypes": [
+            "ON_CHAT_CLOSE"
+          ],
+          "openChatCount": 1,
+          "closeChatCount": 1,
+          "openProfileCount": 1,
+          "chatSessionLength": 1,
+          "timeIntervalMinutes": 6
+        },
+        "returnValueJson5": "{\n  \"dailyLimit\": 48,\n  \"upsellTypes\": [\"POST_AD_VIEW\"],\n  \"triggerTypes\": [\"ON_CHAT_CLOSE\"],\n  \"openChatCount\": 1,\n  \"closeChatCount\": 1,\n  \"openProfileCount\": 1,\n  \"chatSessionLength\": 1,\n  \"timeIntervalMinutes\": 6,\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "45WaTh74WKeQqsryiuG5rI",
+        "baseID": "45WaTh74WKeQqsryiuG5rI",
+        "name": "Only NY in dev",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "custom_field",
+            "targetValue": [
+              "NY"
+            ],
+            "operator": "str_contains_any",
+            "field": "city"
+          },
+          {
+            "type": "country",
+            "targetValue": [
+              "US"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "dailyLimit": 48,
+          "upsellTypes": [
+            "POST_AD_VIEW"
+          ],
+          "triggerTypes": [
+            "ON_CHAT_CLOSE"
+          ],
+          "openChatCount": 1,
+          "closeChatCount": 1,
+          "openProfileCount": 1,
+          "chatSessionLength": 1,
+          "timeIntervalMinutes": 6
+        },
+        "returnValueJson5": "{\n  \"dailyLimit\": 48,\n  \"upsellTypes\": [\"POST_AD_VIEW\"],\n  \"triggerTypes\": [\"ON_CHAT_CLOSE\"],\n  \"openChatCount\": 1,\n  \"closeChatCount\": 1,\n  \"openProfileCount\": 1,\n  \"chatSessionLength\": 1,\n  \"timeIntervalMinutes\": 6,\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "1suypZJuC7rJh7GYggbH0Y:100.00:2",
+        "baseID": "1suypZJuC7rJh7GYggbH0Y",
+        "name": "Everyone in prod",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "dailyLimit": 48,
+          "upsellTypes": [
+            "POST_AD_VIEW"
+          ],
+          "triggerTypes": [
+            "ON_CHAT_CLOSE",
+            "ON_CHAT_OPEN"
+          ],
+          "openChatCount": 1,
+          "closeChatCount": 1,
+          "openProfileCount": 1,
+          "chatSessionLength": 1,
+          "timeIntervalMinutes": 6
+        },
+        "returnValueJson5": "{\n  \"dailyLimit\": 48,\n  \"upsellTypes\": [\"POST_AD_VIEW\"],\n  \"triggerTypes\": [\"ON_CHAT_CLOSE\", \"ON_CHAT_OPEN\"],\n  \"openChatCount\": 1,\n  \"closeChatCount\": 1,\n  \"openProfileCount\": 1,\n  \"chatSessionLength\": 1,\n  \"timeIntervalMinutes\": 6,\n}\n",
+        "environments": [
+          "production"
+        ]
+      },
+      {
+        "id": "4PT8HaHVhMf4ALo4woHxZr",
+        "baseID": "4PT8HaHVhMf4ALo4woHxZr",
+        "name": "Everyone in dev",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "dailyLimit": 48,
+          "upsellTypes": [
+            "POST_AD_VIEW"
+          ],
+          "triggerTypes": [
+            "ON_CHAT_CLOSE",
+            "ON_CHAT_OPEN"
+          ],
+          "openChatCount": 1,
+          "closeChatCount": 1,
+          "openProfileCount": 1,
+          "chatSessionLength": 1,
+          "timeIntervalMinutes": 6
+        },
+        "returnValueJson5": "{\n  \"dailyLimit\": 48,\n  \"upsellTypes\": [\"POST_AD_VIEW\"],\n  \"triggerTypes\": [\"ON_CHAT_CLOSE\", \"ON_CHAT_OPEN\"],\n  \"openChatCount\": 1,\n  \"closeChatCount\": 1,\n  \"openProfileCount\": 1,\n  \"chatSessionLength\": 1,\n  \"timeIntervalMinutes\": 6,\n}\n",
+        "environments": [
+          "development"
+        ]
+      }
+    ],
+    "defaultValue": {},
+    "defaultValueJson5": "{}\n",
+    "version": 17
+  },
+  {
+    "id": "activate-verve-consent-update-android",
+    "name": "activate-verve-consent-update-android",
+    "description": " created by ricardo.calero@team.grindr.com",
+    "idType": "profileId",
+    "lastModifierID": "4QiHFqH4qVMdS2dVYVr26L",
+    "lastModifiedTime": 1740752399780,
+    "lastModifierName": "Andres Atehortua",
+    "lastModifierEmail": "andres.atehortua@team.grindr.com",
+    "creatorID": "6JE71I0GDOgX5Rijdo5Pa4",
+    "createdTime": 1740599429926,
+    "creatorName": "CONSOLE API - console-IUdcaWY***************",
+    "creatorEmail": null,
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [],
+    "team": null,
+    "owner": {
+      "ownerID": "6JE71I0GDOgX5Rijdo5Pa4",
+      "ownerType": "SDK_KEY",
+      "ownerName": "CONSOLE API - console-IUdcaWY***************",
+      "ownerEmail": ""
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "IV0NURgaC755IBXAsXM2M",
+        "baseID": "IV0NURgaC755IBXAsXM2M",
+        "name": "Development - Everyone",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "initializationType": "AFTER"
+        },
+        "returnValueJson5": "{\n  \"initializationType\": \"AFTER\"\n}",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "IV0NWwiCUgzp89TbATplO",
+        "baseID": "IV0NWwiCUgzp89TbATplO",
+        "name": "Production - Everyone",
+        "passPercentage": 0,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "initializationType": "AFTER"
+        },
+        "returnValueJson5": "{\n  \"initializationType\": \"AFTER\"\n}",
+        "environments": [
+          "production"
+        ]
+      }
+    ],
+    "defaultValue": {},
+    "defaultValueJson5": "{}\n",
+    "version": 4
+  },
+  {
+    "id": "android-analytics-batch",
+    "name": "android-analytics-batch",
+    "description": "This flag allow us to modify the analytics batch to send events at the same time created by andres.atehortua@team.grindr.com",
+    "idType": "profileId",
+    "lastModifierID": "eOEMdit7ooUnO8xZ25SLb",
+    "lastModifiedTime": 1749221105877,
+    "lastModifierName": "David Grisales",
+    "lastModifierEmail": "david.grisales@team.grindr.com",
+    "creatorID": "6JE71I0GDOgX5Rijdo5Pa4",
+    "createdTime": 1740599378231,
+    "creatorName": "CONSOLE API - console-IUdcaWY***************",
+    "creatorEmail": null,
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [],
+    "team": null,
+    "owner": {
+      "ownerID": "6JE71I0GDOgX5Rijdo5Pa4",
+      "ownerType": "SDK_KEY",
+      "ownerName": "CONSOLE API - console-IUdcaWY***************",
+      "ownerEmail": ""
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "51KCT9HUUAV8KBxe9wKh7f:100.00:2",
+        "baseID": "51KCT9HUUAV8KBxe9wKh7f",
+        "name": "Development - Everyone",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "batch_limit": "10"
+        },
+        "returnValueJson5": "{\n  \"batch_limit\": \"10\",\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "51KCTbmXmT4D4159KEFUqh",
+        "baseID": "51KCTbmXmT4D4159KEFUqh",
+        "name": "Production - Everyone",
+        "passPercentage": 10,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "batch_limit": "10"
+        },
+        "returnValueJson5": "{\n  \"batch_limit\": \"10\",\n}\n",
+        "environments": [
+          "production"
+        ]
+      }
+    ],
+    "defaultValue": {},
+    "defaultValueJson5": "{}\n",
+    "version": 6
+  },
+  {
+    "id": "mrec-cascade-third",
+    "name": "mrec-cascade-third",
+    "description": "Toggle ad for third mrec",
+    "idType": "userID",
+    "lastModifierID": "7C0mjI9kZMWDF2QVjqR15o",
+    "lastModifiedTime": 1749059456089,
+    "lastModifierName": "Luis Salinas",
+    "lastModifierEmail": "luis.salinas@team.grindr.com",
+    "creatorID": "NCgxJ3apczUUYB7s9YRWN",
+    "createdTime": 1738199335955,
+    "creatorName": "Stan Ostrovskiy",
+    "creatorEmail": "stan.ostrovskiy@team.grindr.com",
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [
+      "Ads"
+    ],
+    "team": null,
+    "owner": {
+      "ownerID": "NCgxJ3apczUUYB7s9YRWN",
+      "ownerType": "USER",
+      "ownerName": "Stan Ostrovskiy",
+      "ownerEmail": "stan.ostrovskiy@team.grindr.com"
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "3luTwzuOQuzDZa90AwuWH9",
+        "baseID": "3luTwzuOQuzDZa90AwuWH9",
+        "name": "Development - Android",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "os_name",
+            "targetValue": [
+              "Android"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 30
+        },
+        "returnValueJson5": "{\n  \"isHardRefreshEnabled\": true,\n  \"getHardRefreshSeconds\": 30,\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "3CKaqClMGeinnc1S5lsE2A",
+        "baseID": "3CKaqClMGeinnc1S5lsE2A",
+        "name": "Development - iOS",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "os_name",
+            "targetValue": [
+              "iOS"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 30
+        },
+        "returnValueJson5": "{\n  \"isHardRefreshEnabled\": true,\n  \"getHardRefreshSeconds\": 30,\n}\n",
+        "environments": [
+          "development"
+        ]
+      },
+      {
+        "id": "3luTwB9RiMJ8izGWbEqA0b",
+        "baseID": "3luTwB9RiMJ8izGWbEqA0b",
+        "name": "Production - Everyone",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "isHardRefreshEnabled": true,
+          "getHardRefreshSeconds": 30
+        },
+        "returnValueJson5": "{\n  \"isHardRefreshEnabled\": true,\n  \"getHardRefreshSeconds\": 30,\n}\n",
+        "environments": [
+          "production"
+        ]
+      }
+    ],
+    "defaultValue": {
+      "isHardRefreshEnabled": false,
+      "getHardRefreshSeconds": 30
+    },
+    "defaultValueJson5": "//Add your Dynamic Config below\n\n{\n  \"isHardRefreshEnabled\": false,\n  \"getHardRefreshSeconds\": 30,\n}\n",
+    "schema": "{\"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"properties\":{}}",
+    "schemaJson5": "{\n  \"$schema\": \"https://json-schema.org/draft/2020-12/schema\",\n  \"properties\": {\n    // Define fields here to start writing your first schema\n  },\n}\n",
+    "version": 4
+  },
+  {
+    "id": "calendar-ui",
+    "name": "calendar-ui",
+    "description": "Controls the UI of the calendar on mobile apps",
+    "idType": "profileId",
+    "lastModifierID": "71EIrazWx0ZWAZKOVYZBg5",
+    "lastModifiedTime": 1748394716322,
+    "lastModifierName": "matt.chang ",
+    "lastModifierEmail": "matt.chang@grindr.com",
+    "creatorID": "1N89YHO8NND7up8uqInEwl",
+    "createdTime": 1733237708908,
+    "creatorName": "Brayan Arias",
+    "creatorEmail": "brayan.arias@team.grindr.com",
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [],
+    "team": null,
+    "owner": {
+      "ownerID": "1N89YHO8NND7up8uqInEwl",
+      "ownerType": "USER",
+      "ownerName": "Brayan Arias",
+      "ownerEmail": "brayan.arias@team.grindr.com"
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "2kijgFHPbFD77DIxxbrV7v:0.00:2",
+        "baseID": "2kijgFHPbFD77DIxxbrV7v",
+        "name": "Production - Everyone",
+        "passPercentage": 0,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "title": "Sponsored",
+          "enabled": true,
+          "category": "rpdr2025",
+          "eventTopColors": {
+            "colors": [
+              "#DC1F3E",
+              "#FCB316"
+            ]
+          },
+          "eventBottomColors": {
+            "colors": [
+              "#24C07C",
+              "#1383EB",
+              "#AB58D3"
+            ]
+          },
+          "cascadeFrameColors": {
+            "colors": [
+              "#DC1F3E",
+              "#FCB316",
+              "#24C07C",
+              "#1383EB",
+              "#AB58D3"
+            ]
+          },
+          "showImageSeparators": true,
+          "localReminderSubtitle": "RuPaul's Drag Race Premiere",
+          "currentEventPickerTextColor": "#000000",
+          "currentEventPickerBackgroundColor": "#FFCC00"
+        },
+        "returnValueJson5": "{\n  \"title\": \"Sponsored\",\n  \"enabled\": true,\n  \"category\": \"rpdr2025\",\n  \"eventTopColors\": {\n    \"colors\": [\"#DC1F3E\", \"#FCB316\"],\n  },\n  \"eventBottomColors\": {\n    \"colors\": [\"#24C07C\", \"#1383EB\", \"#AB58D3\"],\n  },\n  \"cascadeFrameColors\": {\n    \"colors\": [\"#DC1F3E\", \"#FCB316\", \"#24C07C\", \"#1383EB\", \"#AB58D3\"],\n  },\n  \"showImageSeparators\": true,\n  \"localReminderSubtitle\": \"RuPaul's Drag Race Premiere\",\n  \"currentEventPickerTextColor\": \"#000000\",\n  \"currentEventPickerBackgroundColor\": \"#FFCC00\",\n}\n",
+        "environments": [
+          "production"
+        ]
+      },
+      {
+        "id": "2kijgHmRDXMBr3gt8jnyqx:100.00:2",
+        "baseID": "2kijgHmRDXMBr3gt8jnyqx",
+        "name": "Development - Everyone",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "custom_field",
+            "targetValue": [
+              "133986450"
+            ],
+            "operator": "any",
+            "field": "profileId"
+          }
+        ],
+        "returnValue": {
+          "title": "Sponsored",
+          "enabled": true,
+          "category": "pride",
+          "eventTopColors": {
+            "colors": [
+              "#FF57C6",
+              "#A90064"
+            ]
+          },
+          "eventBottomColors": {
+            "colors": [
+              "#FF57C6",
+              "#A90064"
+            ]
+          },
+          "campaignPickerType": "EP",
+          "cascadeFrameColors": {
+            "colors": [
+              "#A90064",
+              "#A90064"
+            ]
+          },
+          "showImageSeparators": true,
+          "localReminderSubtitle": "Sponsored",
+          "currentEventPickerTextColor": "#000000",
+          "currentEventPickerBackgroundColor": "#FFCC00"
+        },
+        "returnValueJson5": "{\n  \"title\": \"Sponsored\",\n  \"enabled\": true,\n  \"category\": \"pride\",\n  \"eventTopColors\": {\n    \"colors\": [\"#FF57C6\", \"#A90064\"],\n  },\n  \"eventBottomColors\": {\n    \"colors\": [\"#FF57C6\", \"#A90064\"],\n  },\n  \"campaignPickerType\": \"EP\",\n  \"cascadeFrameColors\": {\n    \"colors\": [\"#A90064\", \"#A90064\"],\n  },\n  \"showImageSeparators\": true,\n  \"localReminderSubtitle\": \"Sponsored\",\n  \"currentEventPickerTextColor\": \"#000000\",\n  \"currentEventPickerBackgroundColor\": \"#FFCC00\",\n}\n",
+        "environments": [
+          "development",
+          "staging"
+        ]
+      }
+    ],
+    "defaultValue": {},
+    "defaultValueJson5": "//Add your Dynamic Config below\n\n{}\n",
+    "version": 11
+  },
+  {
+    "id": "test-config",
+    "name": "test-config",
+    "description": "",
+    "idType": "profileId",
+    "lastModifierID": "1N89YHO8NND7up8uqInEwl",
+    "lastModifiedTime": 1732036026174,
+    "lastModifierName": "Brayan Arias",
+    "lastModifierEmail": "brayan.arias@team.grindr.com",
+    "creatorID": "1N89YHO8NND7up8uqInEwl",
+    "createdTime": 1732035299968,
+    "creatorName": "Brayan Arias",
+    "creatorEmail": "brayan.arias@team.grindr.com",
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [],
+    "team": null,
+    "owner": {
+      "ownerID": "1N89YHO8NND7up8uqInEwl",
+      "ownerType": "USER",
+      "ownerName": "Brayan Arias",
+      "ownerEmail": "brayan.arias@team.grindr.com"
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "7s4ReODXN4FHDmLzPZYygT",
+        "baseID": "7s4ReODXN4FHDmLzPZYygT",
+        "name": "europe",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "ES",
+              "FR"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "data": "europe"
+        },
+        "returnValueJson5": "{\n  data: \"europe\",\n}\n",
+        "environments": null
+      },
+      {
+        "id": "7s4ReRY2HEYGgbRr2fPOSX",
+        "baseID": "7s4ReRY2HEYGgbRr2fPOSX",
+        "name": "australia",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "AU"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "data": "australia"
+        },
+        "returnValueJson5": "{\n  data: \"australia\"\n}\n",
+        "environments": null
+      },
+      {
+        "id": "5uc494KOwB9gX9JSIjmgj1",
+        "baseID": "5uc494KOwB9gX9JSIjmgj1",
+        "name": "latin america",
+        "passPercentage": 100,
+        "conditions": [
+          {
+            "type": "country",
+            "targetValue": [
+              "CO",
+              "EC",
+              "VE"
+            ],
+            "operator": "any"
+          }
+        ],
+        "returnValue": {
+          "data": "latin america"
+        },
+        "returnValueJson5": "{\n  data: \"latin america\"\n}",
+        "environments": null
+      }
+    ],
+    "defaultValue": {},
+    "defaultValueJson5": "//Add your Dynamic Config below\n\n{}\n",
+    "version": 3
+  },
+  {
+    "id": "samsam-config1",
+    "name": "samsam-config1",
+    "description": "",
+    "idType": "userID",
+    "lastModifierID": "4QiHFqH4qVMdS2dVYVr26L",
+    "lastModifiedTime": 1729893549687,
+    "lastModifierName": "Andres Atehortua",
+    "lastModifierEmail": "andres.atehortua@team.grindr.com",
+    "creatorID": "4PsT05DHaK2mOKP6LQQDDp",
+    "createdTime": 1724788391629,
+    "creatorName": "Sam Sam",
+    "creatorEmail": "sam.samuel@grindr.com",
+    "targetApps": [],
+    "holdoutIDs": [],
+    "tags": [],
+    "team": null,
+    "owner": {
+      "ownerID": "4PsT05DHaK2mOKP6LQQDDp",
+      "ownerType": "USER",
+      "ownerName": "Sam Sam",
+      "ownerEmail": "sam.samuel@grindr.com"
+    },
+    "isEnabled": true,
+    "rules": [
+      {
+        "id": "1dP1K3ai2Wgr8NqNpeD4rH:50.00:4",
+        "baseID": "1dP1K3ai2Wgr8NqNpeD4rH",
+        "name": "rule1",
+        "passPercentage": 50,
+        "conditions": [
+          {
+            "type": "public"
+          }
+        ],
+        "returnValue": {
+          "a": "b"
+        },
+        "returnValueJson5": "{ \"a\": \"b\" }\n",
+        "environments": null
+      }
+    ],
+    "defaultValue": {
+      "c": "d"
+    },
+    "defaultValueJson5": "//Add your Dynamic Config below\n\n{ \"c\": \"d\" }\n",
+    "version": 9
+  }
+]

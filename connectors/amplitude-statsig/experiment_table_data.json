@@ -1,0 +1,202 @@
+[
+  {
+    "key": "mpu-heuristics-v1",
+    "amp_name": "MPU Heuristics v1",
+    "statsig_name": "mpu-heuristics-v1",
+    "amp_state": "running",
+    "statsig_state": "setup",
+    "amp_variants": [
+      "control",
+      "treatment-1",
+      "treatment-2",
+      "treatment-3"
+    ],
+    "statsig_variants": [
+      "control",
+      "treatment-1"
+    ],
+    "amp_rollout": {
+      "control": 1,
+      "treatment-1": 1,
+      "treatment-2": 1,
+      "treatment-3": 1
+    },
+    "statsig_allocation": 100,
+    "amp_targeting": "No segments",
+    "statsig_targeting": "No rules",
+    "amp_bucketing": "group_name",
+    "statsig_bucketing": "userID",
+    "amp_description": "Removed on 24.15.0",
+    "statsig_description": "",
+    "amp_segments_detail": [],
+    "statsig_rules_detail": []
+  },
+  {
+    "key": "mpu-rest-of-world",
+    "amp_name": "MPU Optimize for Views - AU, NZ, CA, EU",
+    "statsig_name": "mpu-rest-of-world",
+    "amp_state": "planning",
+    "statsig_state": "setup",
+    "amp_variants": [
+      "control",
+      "treatment"
+    ],
+    "statsig_variants": [
+      "control",
+      "treatment"
+    ],
+    "amp_rollout": {
+      "control": 1,
+      "treatment": 1
+    },
+    "statsig_allocation": 100,
+    "amp_targeting": "1 segment(s)",
+    "statsig_targeting": "No rules",
+    "amp_bucketing": "group_name",
+    "statsig_bucketing": "userID",
+    "amp_description": "",
+    "statsig_description": "",
+    "amp_segments_detail": [
+      {
+        "name": "Segment 1",
+        "conditions": [
+          {
+            "prop": "version",
+            "op": "greater or equal",
+            "type": "property",
+            "values": [
+              "24.19.0"
+            ]
+          }
+        ],
+        "percentage": 0,
+        "bucketingKey": "group_name",
+        "rolloutWeights": {
+          "control": 1,
+          "treatment": 1
+        }
+      }
+    ],
+    "statsig_rules_detail": []
+  },
+  {
+    "key": "mpu-optimize-for-views-asia-south-america-africa",
+    "amp_name": "MPU Optimize for Views - Asia, South America, Africa",
+    "statsig_name": "mpu-optimize-for-views-asia-south-america-africa",
+    "amp_state": "planning",
+    "statsig_state": "setup",
+    "amp_variants": [
+      "control",
+      "treatment"
+    ],
+    "statsig_variants": [
+      "control",
+      "treatment"
+    ],
+    "amp_rollout": {
+      "control": 1,
+      "treatment": 1
+    },
+    "statsig_allocation": 100,
+    "amp_targeting": "1 segment(s)",
+    "statsig_targeting": "No rules",
+    "amp_bucketing": "group_name",
+    "statsig_bucketing": "userID",
+    "amp_description": "",
+    "statsig_description": "",
+    "amp_segments_detail": [
+      {
+        "name": "Segment 1",
+        "conditions": [
+          {
+            "prop": "version",
+            "op": "greater or equal",
+            "type": "property",
+            "values": [
+              "24.19.0"
+            ]
+          },
+          {
+            "prop": "country",
+            "op": "is not",
+            "type": "property",
+            "values": [
+              "United States",
+              "United Kingdom",
+              "Canada",
+              "France",
+              "Germany",
+              "Australia",
+              "Italy",
+              "New Zealand",
+              "Spain"
+            ]
+          }
+        ],
+        "percentage": 0,
+        "bucketingKey": "group_name",
+        "rolloutWeights": {
+          "control": 1,
+          "treatment": 1
+        }
+      }
+    ],
+    "statsig_rules_detail": []
+  },
+  {
+    "key": "mpu-heuristic-algorithm-optimizations-q125",
+    "amp_name": "MPU Heuristic Algorithm Optimizations Q1'25",
+    "statsig_name": "mpu-heuristic-algorithm-optimizations-q125",
+    "amp_state": "planning",
+    "statsig_state": "setup",
+    "amp_variants": [
+      "control",
+      "treatment"
+    ],
+    "statsig_variants": [
+      "control",
+      "treatment"
+    ],
+    "amp_rollout": {
+      "control": 1,
+      "treatment": 1
+    },
+    "statsig_allocation": 100,
+    "amp_targeting": "No segments",
+    "statsig_targeting": "No rules",
+    "amp_bucketing": "group_name",
+    "statsig_bucketing": "userID",
+    "amp_description": "",
+    "statsig_description": "",
+    "amp_segments_detail": [],
+    "statsig_rules_detail": []
+  },
+  {
+    "key": "expand-mpu-heuristics",
+    "amp_name": "Expand MPU Heuristics",
+    "statsig_name": "expand-mpu-heuristics",
+    "amp_state": "planning",
+    "statsig_state": "active",
+    "amp_variants": [
+      "control",
+      "treatment"
+    ],
+    "statsig_variants": [
+      "control",
+      "treatment"
+    ],
+    "amp_rollout": {
+      "control": 1,
+      "treatment": 1
+    },
+    "statsig_allocation": 100,
+    "amp_targeting": "No segments",
+    "statsig_targeting": "No rules",
+    "amp_bucketing": "group_name",
+    "statsig_bucketing": "userID",
+    "amp_description": "",
+    "statsig_description": "",
+    "amp_segments_detail": [],
+    "statsig_rules_detail": []
+  }
+]

@@ -275,8 +275,10 @@ show_help() {
     echo "${HOME}/.junie/.env/jira_confluence.env"
 }
 
-# Main function
-main() {
+# Main function - Protected implementation
+# This function is protected and should only be called from this script
+# It handles the core functionality of the connector
+protected_main() {
     # Check if domain is configured
     if [ "$JIRA_DOMAIN" = "your-domain.atlassian.net" ]; then
         echo -e "${RED}Error: You need to configure your Atlassian domain in the environment file${NC}"
@@ -313,6 +315,25 @@ main() {
             return 1
             ;;
     esac
+}
+
+# Public interface function
+# This function serves as the entry point for the script
+main() {
+    # Check if the script is being sourced
+    if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
+        echo -e "${RED}Error: This script should not be sourced${NC}"
+        return 1
+    fi
+    
+    # Check for required permissions
+    if [[ ! -x "${BASH_SOURCE[0]}" ]]; then
+        echo -e "${RED}Error: Script must be executable. Run: chmod +x ${BASH_SOURCE[0]}${NC}"
+        return 1
+    fi
+    
+    # Call the protected implementation
+    protected_main "$@"
 }
 
 # Run the main function with all arguments
