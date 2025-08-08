@@ -65,11 +65,19 @@ class StatsigExporter:
             return configs
         return []
 
-def save_json(data, filename):
+def save_json(data, filename, directory=""):
     """Save data as pretty-printed JSON"""
-    with open(filename, 'w') as f:
+    # Create directory if it doesn't exist
+    if directory and not os.path.exists(directory):
+        os.makedirs(directory, exist_ok=True)
+        print(f"📁 Created directory: {directory}")
+    
+    # Construct the full path
+    filepath = os.path.join(directory, filename) if directory else filename
+    
+    with open(filepath, 'w') as f:
         json.dump(data, f, indent=2, default=str)
-    print(f"💾 Saved to {filename}")
+    print(f"💾 Saved to {filepath}")
 
 def compare_mpu_experiments(amplitude_data, statsig_data, target_experiments):
     """Compare specific MPU experiments between Amplitude and Statsig"""
@@ -80,7 +88,11 @@ def compare_mpu_experiments(amplitude_data, statsig_data, target_experiments):
     if isinstance(amplitude_data, str):
         with open(amplitude_data, 'r') as f:
             amp_data = json.load(f)
-            amplitude_experiments = amp_data.get('experiments', [])
+            # Handle both old and new format
+            if isinstance(amp_data, dict) and 'experiments' in amp_data:
+                amplitude_experiments = amp_data.get('experiments', [])
+            else:
+                amplitude_experiments = amp_data
     else:
         amplitude_experiments = amplitude_data
 
@@ -200,13 +212,16 @@ def main():
     feature_gates = exporter.get_feature_gates()
     dynamic_configs = exporter.get_dynamic_configs()
     
+    # Define output directory
+    output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "build", "statsig")
+    
     # Save individual files
     if experiments:
-        save_json(experiments, 'statsig_experiments.json')
+        save_json(experiments, 'statsig_experiments.json', output_dir)
     if feature_gates:
-        save_json(feature_gates, 'statsig_feature_gates.json')
+        save_json(feature_gates, 'statsig_feature_gates.json', output_dir)
     if dynamic_configs:
-        save_json(dynamic_configs, 'statsig_dynamic_configs.json')
+        save_json(dynamic_configs, 'statsig_dynamic_configs.json', output_dir)
     
     # Save combined export
     combined_data = {
@@ -220,7 +235,7 @@ def main():
             'total_dynamic_configs': len(dynamic_configs)
         }
     }
-    save_json(combined_data, 'statsig_complete_export.json')
+    save_json(combined_data, 'statsig_complete_export.json', output_dir)
     
     # Compare specific MPU experiments
     target_experiments = [
@@ -231,10 +246,14 @@ def main():
         "expand-mpu-heuristics"
     ]
     
-    if os.path.exists('amplitude_experiments.json'):
+    # Define amplitude data path
+    amplitude_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "build", "amplitude")
+    amplitude_file = os.path.join(amplitude_dir, 'amplitude_experiments.json')
+    
+    if os.path.exists(amplitude_file):
         print(f"\n🔍 Comparing {len(target_experiments)} MPU experiments...")
-        comparison_results = compare_mpu_experiments('amplitude_experiments.json', experiments, target_experiments)
-        save_json(comparison_results, 'mpu_experiments_comparison.json')
+        comparison_results = compare_mpu_experiments(amplitude_file, experiments, target_experiments)
+        save_json(comparison_results, 'mpu_experiments_comparison.json', output_dir)
         
         # Summary
         print(f"\n📋 COMPARISON SUMMARY")

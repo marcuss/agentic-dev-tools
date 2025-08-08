@@ -232,8 +232,12 @@ def main():
     print("🔄 Amplitude to Statsig Configuration Comparator")
     print("="*50)
     
+    # Define amplitude data path
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    amplitude_dir = os.path.join(project_root, "build", "amplitude")
+    amplitude_file = os.path.join(amplitude_dir, "amplitude_complete_export.json")
+    
     # Check if amplitude export file exists
-    amplitude_file = "amplitude_complete_export.json"
     if not os.path.exists(amplitude_file):
         print(f"❌ Amplitude export file not found: {amplitude_file}")
         print("\nFirst run: python3 amplitude_export.py")

@@ -68,11 +68,19 @@ class AmplitudeExporter:
             print(f"✗ Error fetching deployments: {e}")
             return []
 
-def save_json(data, filename):
+def save_json(data, filename, directory=""):
     """Save data as pretty-printed JSON"""
-    with open(filename, 'w') as f:
+    # Create directory if it doesn't exist
+    if directory and not os.path.exists(directory):
+        os.makedirs(directory, exist_ok=True)
+        print(f"📁 Created directory: {directory}")
+    
+    # Construct the full path
+    filepath = os.path.join(directory, filename) if directory else filename
+    
+    with open(filepath, 'w') as f:
         json.dump(data, f, indent=2, default=str)
-    print(f"💾 Saved to {filename}")
+    print(f"💾 Saved to {filepath}")
 
 def print_summary(flags, experiments):
     """Print a summary of the exported data"""
@@ -131,13 +139,16 @@ def main():
     experiments = exporter.export_experiments()
     deployments = exporter.get_deployments()
     
+    # Define output directory
+    output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "build", "amplitude")
+    
     # Save individual files
     if flags:
-        save_json(flags, 'amplitude_flags.json')
+        save_json(flags, 'amplitude_flags.json', output_dir)
     if experiments:
-        save_json(experiments, 'amplitude_experiments.json')
+        save_json(experiments, 'amplitude_experiments.json', output_dir)
     if deployments:
-        save_json(deployments, 'amplitude_deployments.json')
+        save_json(deployments, 'amplitude_deployments.json', output_dir)
     
     # Save combined export
     combined_data = {
@@ -153,7 +164,7 @@ def main():
             'running_experiments': len([e for e in experiments if e.get('state') == 'running'])
         }
     }
-    save_json(combined_data, 'amplitude_complete_export.json')
+    save_json(combined_data, 'amplitude_complete_export.json', output_dir)
     
     # Print summary
     print_summary(flags, experiments)

@@ -28,3 +28,5 @@ replay_pid*
 
 # Environment files with sensitive information
 .env/
+/build/
+/env/DEV.env
